@@ -945,13 +945,134 @@ layui.use(['form','jquery','jquery_cookie'], function () {
 
 #### 4.2.1 核心思路
 
+```java
+--------密码修改--------
+【service层】
+1. 校验
+    从cookie获取id属性
+    ① 非空
+    ② 数据库id是否存在
+2. 更改
+    旧密码 非空 与数据库密码对比（处理加密）
+    新密码 非空 与原密码不同
+    确认密码 非空 与新密码相同
+3. 执行
+    执行操作，返回结果集ResultInfo
+```
+
 #### 4.2.2 代码实现
 
 ##### 4.2.2.1 后端代码
 
-##### 4.2.2.2 前端代码
+###### 1. Servicec层
 
-#### 4.2.3 测试
+实现代码修改，updateUserPassword方法
+
+com/xxxx/crm/service/UserService.java
+
+```java
+ /**
+     * 用户密码修改
+     * 注：在对应的更新⽅法上，添加事务控制
+     * @param userId
+     * @param oldPassword
+     * @param newPassword
+     * @param confirmPassword
+     */
+	@Transactional(propagation = Propagation.REQUIRED)
+    public void updateUserPassword(Integer userId,String oldPassword,String newPassword,String confirmPassword){
+        //通过userId获取用户对象
+        User user = userMapper.selectByPrimaryKey(userId);
+        //参数校验
+        checkPasswordParams(user,oldPassword,newPassword,confirmPassword);
+        //设置用户新密码,注意加密
+        user.setUserPwd(Md5Util.encode(newPassword));
+ user.setUpdateDate(new Date());
+        //更新验证
+        AssertUtil.isTrue(userMapper.updateByPrimaryKeySelective(user) < 1,"密码更新失败！");
+    }
+
+    /**
+     * 密码参数校验
+     * @param user
+     * @param oldPassword
+     * @param newPassword
+     * @param confirmPassword
+     */
+    private void checkPasswordParams(User user, String oldPassword, String newPassword, String confirmPassword) {
+        AssertUtil.isTrue(user == null,"用户未登录或不存在");
+        AssertUtil.isTrue(StringUtils.isBlank(oldPassword),"请输入原始密码");
+        AssertUtil.isTrue(user.getUserPwd().equals(Md5Util.encode(oldPassword)),"原始密码不正确");
+        AssertUtil.isTrue(StringUtils.isBlank(newPassword),"新密码不能为空");
+        AssertUtil.isTrue(oldPassword.equals(newPassword),"新密码不能与原密码相同");
+        AssertUtil.isTrue(StringUtils.isBlank(confirmPassword),"请输入确认密码");
+        AssertUtil.isTrue(newPassword.equals(confirmPassword),"确认密码与新密码不一致！");
+    }
+```
+
+###### 2. controller层
+
+逻辑关系
+
+![image-20201203212105338](CRM_01_用户管理.assets/image-20201203212105338.png)
+
+```java
+@RequestMapping("/update")
+    @ResponseBody
+    public ResultInfo updateUserPwd(HttpServletRequest request, String oldPassword, String newPassword, String confirmPassword){
+        ResultInfo resultInfo = new ResultInfo();
+
+        try {
+            //获取id
+            int userId = LoginUserUtil.releaseUserIdFromCookie(request);
+            //调用service
+            userService.updateUserPwd(userId,oldPassword,newPassword,confirmPassword);
+        }catch (ParamsException e) {
+            e.printStackTrace();
+            resultInfo.setCode(e.getCode());
+            resultInfo.setMsg(e.getMsg());
+        } catch (Exception e) {
+            e.printStackTrace();
+            resultInfo.setCode(500);
+            resultInfo.setMsg("修改密码失败");
+        }
+
+        return resultInfo;
+    }
+}
+```
+
+##### 4.2.2.2 PostMan测试
+
+![image-20201203212914558](CRM_01_用户管理.assets/image-20201203212914558.png)
+
+###### 1. 添加cookie
+
+![image-20201203213117917](CRM_01_用户管理.assets/image-20201203213117917.png)
+
+![image-20201203213145303](CRM_01_用户管理.assets/image-20201203213145303.png)
+
+![image-20201203213201181](CRM_01_用户管理.assets/image-20201203213201181.png)
+
+![image-20201203213226213](CRM_01_用户管理.assets/image-20201203213226213.png)
+
+![image-20201203213303868](CRM_01_用户管理.assets/image-20201203213303868.png)
+
+![image-20201203213346751](CRM_01_用户管理.assets/image-20201203213346751.png)
+
+![image-20201203213427708](CRM_01_用户管理.assets/image-20201203213427708.png)
+
+> 这里注意`userIdStr`的S是大写，与前台index.js中`$.cookie("userIdStr", result.userIdStr);`相同，这里的`userIdStr`与`LoginUserUtil`工具类中提取`userIdStr`一致。
+
+![image-20201203221107893](CRM_01_用户管理.assets/image-20201203221107893.png)
+
+##### 4.2.2.3 前端代码
+
+```js
+
+```
+
+
 
 ### 4.3 用户退出
 
@@ -1055,9 +1176,7 @@ ctrl + alt + T
 
    ![](CRM_01_用户管理.assets/image-20201130215615570.png)
 
-2. 逆向工程与数据库是否连接无关，
-
-
+2. 逆向工程与数据库是否连接无关，与其中数据驱动位置copy的path有关。
 
 ### 7.7 idea无法加载主类
 
@@ -1081,5 +1200,29 @@ return false
 
 ### 7.10 js 与 ftl 中的数据传输（监听）
 
+```js
+lay-filter
+在.ftl中监听这个属性
+```
+
 ![image-20201202214557606](CRM_01_用户管理.assets/image-20201202214557606.png)
 
+### 7.11 关于事务
+
+#### 7.11.1 为什么密码更新需要事务
+
+
+
+#### 7.11.2 springBoot中事务
+
+Springboot中,事务的注解如下:
+
+```
+@Transactional(propagation = Propagation.REQUIRED)
+```
+
+其中,**Propagation**有7个常量值,常用的有REQUIRED和SUPPORTS。
+
+**PROPAGATION_REQUIRED**: 如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。这是最常见的选择。
+
+**PROPAGATION_SUPPORTS**: 支持当前事务，如果当前没有事务，就以非事务方式执行。

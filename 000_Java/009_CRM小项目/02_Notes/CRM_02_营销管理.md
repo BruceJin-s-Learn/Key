@@ -68,33 +68,42 @@ select * from student where name like concat("%",#{name},"%");
 
 ![image-20201202143132336](CRM_02_营销管理.assets/image-20201202143132336.png)
 
-
-
-### 3.4  
-
-mapper准备方法
-
-xml中id与方法名相同，写sql实现方法
-
-service
-
-controller调用方法
-
-前端js发送请求
-
-ftl中的唯一表示与js连接
-
-
-
-### 3.5 获取对象写法
+### 3.4 获取对象写法
 
 js：$()
 
 ftl：${}
 
-### 3.6 测试技巧
+### 3.5 测试技巧
 
 写一个前台测试一下
 
 写一个后台测试一下
 
+### 3.6 BaseController
+
+提供了一个 ctx 路径
+
+### 3.7 路径
+
+ftl中的data_path对应controller层的requestMapper和方法上的路径
+
+### 3.8 
+
+![image-20201203111406049](CRM_02_营销管理.assets/image-20201203111406049.png)
+
+### 3.9 
+
+![image-20201203112510618](CRM_02_营销管理.assets/image-20201203112510618.png)
+
+### 3.10 表单刷新
+
+通过hidden隐藏域中的id的value进行获取。
+
+id：唯一性
+
+hidden：不让用户看到，要隐藏
+
+### 3.11 
+
+![image-20201203155417557](CRM_02_营销管理.assets/image-20201203155417557.png)
