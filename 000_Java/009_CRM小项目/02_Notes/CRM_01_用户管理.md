@@ -941,6 +941,33 @@ layui.use(['form','jquery','jquery_cookie'], function () {
 
 ![image-20201202223358353](CRM_01_用户管理.assets/image-20201202223358353.png)
 
+##### 4.1.3.5 主页面显示用户信息
+
+在controller层的`indexController`中修改地址为`main`的方法
+
+```java
+/**
+* 后端管理主⻚⾯
+* @return
+*/
+@RequestMapping("main")
+public String main(HttpServletRequest request){
+    // 通过⼯具类，从cookie中获取userId,解密
+    int userId = LoginUserUtil.releaseUserIdFromCookie(request);
+    //调用userService中的方法，通过id查询用户信息
+    User user = userService.selectByPrimaryKey(userId);
+    //将用户信息传入作用域中
+    request.setAttribute("user",user);
+    return "main";
+}
+```
+
+![image-20201206163404482](CRM_01_用户管理.assets/image-20201206163404482.png)
+
+
+
+![image-20201206163724649](CRM_01_用户管理.assets/image-20201206163724649.png)
+
 ### 4.2 密码修改
 
 #### 4.2.1 核心思路
@@ -1068,15 +1095,100 @@ com/xxxx/crm/service/UserService.java
 
 ##### 4.2.2.3 前端代码
 
+包：src/main/resources/public/js/user/password.js
+
 ```js
+/**
+*	数据连接情况
+*   前端此页面是main界面，故在main.ftl中查看点击“修改密码”按钮跳转情况
+*   然后通过controller层进行页面的请求跳转
+*/
+
+layui.use(['form','jquery','jquery_cookie'], function () {
+    var form = layui.form,
+        layer = layui.layer,
+        $ = layui.jquery,
+        $ = layui.jquery_cookie($);
+
+    form.on("submit(saveBtn)",function(data){
+
+        var dataField = data.field;
+
+        $.ajax({
+            type:"post",
+            url:ctx + "/user/update",
+            data:{
+                oldPassword:dataField.old_password,
+                newPassword:dataField.new_password,
+                confirmPassword:dataField.again_password
+            },
+            dataType:"json",
+            success:function (data) {
+                if(data.code == 200){
+                    layer.msg("修改密码成功，稍后请重新登录",
+                        function () {
+                            //清空cookie缓存
+                            $.removeCookie("userIdStr",{domain:"localhost",path:"/crm"});
+                            $.removeCookie("userName",{domain:"localhost",path:"/crm"});
+                            $.removeCookie("trueName",{domain:"localhost",path:"/crm"});
+                            //在父窗口/顶级窗口 跳转到登录页面
+                            window.parent.location.href = ctx + "/index";
+                        })
+                }else{
+                    layer.msg(data.msg);
+                }
+            }
+        })
+    });
+    return false;
+});
 
 ```
 
+>:exclamation: ​要注意父窗口跳转
+>
+>1. 这个函数是在layer.msg中的
+>2. 必须parent，否则同等级页面会发生嵌套
 
+![image-20201206152103748](CRM_01_用户管理.assets/image-20201206152103748.png)
+
+![image-20201206152328469](CRM_01_用户管理.assets/image-20201206152328469.png)
+
+![image-20201206165712659](CRM_01_用户管理.assets/image-20201206165712659.png)
 
 ### 4.3 用户退出
 
 #### 4.3.1 代码实现
+
+清除cookie并退出，通过class属性监听(main.js)
+
+![image-20201206173617064](CRM_01_用户管理.assets/image-20201206173617064.png)
+
+![image-20201206173604010](CRM_01_用户管理.assets/image-20201206173604010.png)
+
+```js
+layui.use(['element', 'layer', 'layuimini','jquery','jquery_cookie'], function () {
+    var $ = layui.jquery,
+        layer = layui.layer,
+        $ = layui.jquery_cookie($);
+
+    // 菜单初始化
+    $('#layuiminiHomeTabIframe').html('<iframe width="100%" height="100%" frameborder="0"  src="welcome"></iframe>')
+    layuimini.initTab();
+
+
+    $(".login-out").click(function () {
+        //删除cookie缓存
+        $.removeCookie("userIdStr", {domain:"localhost",path:"/crm"});
+        $.removeCookie("userName", {domain:"localhost",path:"/crm"});
+        $.removeCookie("trueName", {domain:"localhost",path:"/crm"});
+        // 跳转到登录⻚⾯ (⽗窗⼝跳转)
+        window.parent.location.href = ctx + "/index";
+    })
+});
+```
+
+
 
 ## 5. 处理情况
 
@@ -1084,27 +1196,297 @@ com/xxxx/crm/service/UserService.java
 
 #### 5.1.1 实现思路
 
-
+```java
+控制层的方法返回的数据（两种）进行分析
+    1.视图，视图异常
+    2.JSON，方法执行错误 返回错误的JSON信息
+    
+通过是否有注解@ResponseBody来区分视图和Json
+```
 
 #### 5.1.2 拦截器实现
 
+实现 `HandlerExceptionResolver`接口
+
+```java
+package com.xxxx.crm;
+
+import com.alibaba.fastjson.JSON;
+import com.xxxx.crm.base.ResultInfo;
+import com.xxxx.crm.exceptions.NoLoginException;
+import com.xxxx.crm.exceptions.ParamsException;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Method;
+
+/**
+ * @program: crm
+ * @description: 全局异常处理
+ * @author: CoreDao
+ * @create: 2020-12-06 17:48
+ **/
+
+public class GlobalExceptionResolver implements HandlerExceptionResolver {
+
+    /**
+     * 方法返回值类型
+     *    视图
+     *    JSON
+     * 如何判断方法的返回类型：
+     *    如果方法级别配置了 @ResponseBody 注解，表示方法返回的是JSON；
+     *	  反之，返回的是视图页面
+     * @param httpServletRequest
+     * @param httpServletResponse
+     * @param handler
+     * @param e
+     * @return
+     */
+    @Override
+    public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler, Exception e) {
+
+        /**
+         * 判断异常类型
+         *     如果是未登录异常，则先执行相关的拦截操作
+         */
+        if(e instanceof NoLoginException){
+            // 如果捕获的是未登录异常，则重定向到登录页面
+            ModelAndView mv = new ModelAndView();
+            mv.setViewName("redirect:/index");
+            return mv;
+        }
+
+        //设置默认返回值  (视图默认返回值)
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("error");
+        mv.addObject("code",300);
+        mv.addObject("msg","系统异常，请重试");
+
+        //判断当前异常的 接口返回的是哪种数据(视图/JSON)
+        if(handler instanceof HandlerMethod){
+            //转换对象，controller的接口对象
+            HandlerMethod handlerMethod = (HandlerMethod)handler;
+            //获取接口方法
+            Method method = handlerMethod.getMethod();
+            //获取 判断当前方法是否包含@ResponseBody的注解
+            ResponseBody responseBody = method.getDeclaredAnnotation(ResponseBody.class);
+
+            //判断是否有ResponseBody
+            if(responseBody == null){
+
+                //返回的是视图
+                if(e instanceof ParamsException){
+                    ParamsException ex = (ParamsException)e;
+                    mv.addObject("code",ex.getCode());
+                    mv.addObject("msg",ex.getMsg());
+                }
+                return mv;
+
+            }else{
+                //返回的是json数据
+
+                //设置默认json返回的接口，返回的数据
+                ResultInfo resultInfo = new ResultInfo();
+                resultInfo.setCode(400);
+                resultInfo.setMsg("系统异常，请重试");
+
+                //如果是自定义的异常，那么更换里面的信息
+                if(e instanceof ParamsException){
+                    ParamsException ex = (ParamsException)e;
+                    resultInfo.setCode(ex.getCode());
+                    resultInfo.setMsg(ex.getMsg());
+                }
+
+                //将数据传输出去
+                //设置编码格式，响应类型
+                httpServletResponse.setContentType("application/json;charset=utf-8");
+
+                PrintWriter writer = null;
+                try {
+                    //获取输出流
+                    writer = httpServletResponse.getWriter();
+                    writer.write(JSON.toJSONString(resultInfo));
+
+                    writer.flush();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }finally {
+                    if(writer != null){
+                        //关闭资源
+                        writer.close();
+                    }
+                }
+            }
+        }
+        return null;
+    }
+}
+```
+
 #### 5.1.3 消除try-catch代码
+
+系统引入全局异常处理，简化try-catch代码
 
 ### 5.2 非法请求拦截
 
 #### 5.2.1 实现思路
 
+```java
+/**
+* 判断⽤户是否是登录状态
+* 获取Cookie对象，解析⽤户ID的值
+* 如果⽤户ID不为空，且在数据库中存在对应的⽤户记录，表示请求合法
+* 否则，请求不合法，进⾏拦截，重定向到登录⻚⾯
+*/
+```
+
 #### 5.2.2 定义拦截器
+
+新建包和类：com/xxxx/crm/interceptors/NoLoginInterceptor.java
+
+继承`HandlerInterceptorAdapter`适配器
+
+```java
+package com.xxxx.crm.interceptors;
+
+import com.xxxx.crm.exceptions.NoLoginException;
+import com.xxxx.crm.service.UserService;
+import com.xxxx.crm.utils.LoginUserUtil;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * @program: crm
+ * @description: 拦截器,⾮法访问拦截
+ * @author: CoreDao
+ * @create: 2020-12-06 18:14
+ **/
+
+public class NoLoginInterceptor extends HandlerInterceptorAdapter {
+    
+        @Resource
+        private UserService userService;
+        /**
+         * 判断⽤户是否是登录状态
+         * 获取Cookie对象，解析⽤户ID的值
+         * 如果⽤户ID不为空，且在数据库中存在对应的⽤户记录，表示请求合法
+         * 否则，请求不合法，进⾏拦截，重定向到登录⻚⾯
+         * @param request
+         * @param response
+         * @param handler
+         * @return
+         * @throws Exception
+         */
+        @Override
+        public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+            // 获取Cookie中的⽤户ID
+            Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+            // 判断⽤户ID是否不为空，且数据库中存在对应的⽤户记录
+            if (null == userId || null == userService.selectByPrimaryKey(userId))
+            {
+                // 抛出未登录异常
+                throw new NoLoginException();
+            }
+            return true;
+        }
+}
+```
 
 #### 5.2.3 配置
 
+##### 5.2.3.1 全局异常类配置
+
+在全局异常类中加入未登录异常处理，前面代码已经加入，可查看。
+
+##### 5.2.3.2 拦截器生效配置
+
+新建包和类：com/xxxx/crm/config/MvcConfig.java
+
+```java
+package com.xxxx.crm.config;
+
+import com.xxxx.crm.interceptors.NoLoginInterceptor;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+/**
+ * @program: crm
+ * @description: 拦截器生效配置类
+ * @author: CoreDao
+ * @create: 2020-12-06 18:23
+ **/
+
+@Configuration
+public class MvcConfig implements WebMvcConfigurer {
+
+    @Bean
+    public NoLoginInterceptor ctreateNoLoginInterceptor(){
+        return new NoLoginInterceptor();
+    }
+
+    /**
+     * 添加拦截器
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(ctreateNoLoginInterceptor())
+                .addPathPatterns("/**")
+                .excludePathPatterns("/index","/user/login","/css/**","/images/**","/js/**","/lib/**");
+    }
+}
+```
+
 #### 5.2.4 测试
+
+当 Cookie 中的⽤户ID不存在时，访问 main ⻚⾯，会⾃动跳转到登录⻚⾯。
 
 ## 6. 实现记住我功能
 
+### 6.1 实现思路
 
+```java
+点击记住我
+默认设置cookie存储即可7天
+```
 
-## 7. :question: 问题
+### 6.2 代码实现
+
+#### 6.2.1 index.ftl
+
+```html
+<#-- 记住我 -->
+<div class="layui-form-item">
+<input type="checkbox" name="rememberMe" id="rememberMe" value="true" layskin="
+primary" title="记住密码">
+</div>
+```
+
+#### 6.2.2 index.is
+
+在ajax请求的 sucess的方法中的 存入cookie和跳转页面之间加入
+
+```js
+//如果用户选择了记住密码，将cookie设置成7天
+if($("#rememberMe").prop("checked")){
+    $.cookie("userIdStr",data.result.userIdStr,{expires:7});
+    $.cookie("userName",data.result.userName,{expires:7});
+    $.cookie("trueName",data.result.trueName,{expires:);
+}
+```
+
+## 7 :question: 问题
 
 ### 7.1 绝对路径与相对路径
 
