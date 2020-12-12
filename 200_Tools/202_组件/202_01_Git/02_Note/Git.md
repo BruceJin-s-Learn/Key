@@ -8,8 +8,6 @@
 
 3.缺点，如何避免
 
-思否，掘金
-
 ## .2 版本控制
 
 1、本地
@@ -157,5 +155,94 @@ git fach // 查看状态
 
 ### 9.1 本地
 
+#### 9.1.1 产生原因
 
+两个以上的分支commit后会造成
 
+![image-20201209215234499](Git.assets/image-20201209215234499.png)
+
+主动修改本地文件然后提交
+
+### 9.2 多人
+
+#### 9.2.1 原因
+
+拉取远程库dev 并在本地创建dev开发库,执行命令 `git checkout -b dev origin/dev` 这里以同台机器不同窗口来模拟两个用户操作同一分支同一文件(实际开发时多人操作统一文件冲突情况比较常见)
+
+#### 9.2.2 解决
+
+.1 先执行 pull 拉去操作
+
+`git pull`
+
+.2 `cat`查看冲突文件内容
+
+.3 本地处理，而后`push`
+
+## .10 标签管理（版本管理）
+
+### 10.1 常用命令
+
+```git
+git tag name //默认最后一次提交的-m 即HEAD
+git tag -a name -m "dericr"
+
+git tag
+//推送
+git push origin name //本地到远程
+git push origin --tags //推送所有
+//删除
+git push origin:refs/tsafs/name //远程 
+git tag -d name //本地
+```
+
+## .11 idea下git基本操作
+
+> idea 添加：启动页 -> configure -> settings -> version control -> git
+
+![image-20201210095952619](Git.assets/image-20201210095952619.png)
+
+### 11.1 远程到本地
+
+file -> new -> project from version control
+
+![image-20201210102150293](Git.assets/image-20201210102150293.png)
+
+### 11.2 本地到远程
+
++ 项目右键
+
++ VCS
+  + remotes 绑定远程
+
++ 快捷导航栏
+
+### 11.3 分支
+
++ 右下角分支图标中
+  + 新建
+  + 推送
+  + 删除
+  + 合并
+
++ 左下角git中可查看Log和diff操作
+
++ 冲突
+
+  + 本地
+  
+    
+  
+  + 远程（多人协同）
+  
+    
+
+### 11.4 插件：ignore
+
+忽略一些我们不想提交的文件
+
+生成一个gitignore文件，把想忽略的文件添加进去
+
+注：若想忽略的文件加到暂存区则不会忽略成功
+
+## .12 问题
