@@ -447,10 +447,6 @@ Spring AMQP
 
 ### 7.2 死性队列
 
-
-
-
-
 vue
 
 spring
