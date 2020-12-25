@@ -69,6 +69,7 @@ git reset --hard HEAD~'数字' //回退版本
 git reset HEAD file //撤消操作
 git restore --staged file //从暂存区撤回，注意版本有的没--help查看
 git restore file //撤销文件中内容
+git rm file --cached //删除暂存区的此文件
 
 //删除
 git checkout file //从版本库，误删拉取
@@ -157,7 +158,7 @@ git fach // 查看状态
 
 #### 9.1.1 产生原因
 
-两个以上的分支commit后会造成
+两个以上的分支同时commit后会造成
 
 ![image-20201209215234499](Git.assets/image-20201209215234499.png)
 
@@ -171,7 +172,7 @@ git fach // 查看状态
 
 #### 9.2.2 解决
 
-.1 先执行 pull 拉去操作
+.1 先执行 pull 拉取操作
 
 `git pull`
 
