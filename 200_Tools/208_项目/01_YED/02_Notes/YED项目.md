@@ -122,3 +122,7 @@ F12，network,xhr查看请求和返回参数
 ### .6 idea中的git基本操作
 
 ![image-20201220212306508](YED项目.assets/image-20201220212306508.png)
+
+### .7 验证码
+
+aj-captche
