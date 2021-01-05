@@ -43,7 +43,7 @@ web应用安全解决方案
 
 #### 2.2.1 准备
 
-写方法继承`UsernamePasswordAuthenticationFilter`方法，重写`attempAuthentication`方法，验证成功调用`successfulAuthentication`方法，失败调用`unsuccessfulAuthentication`方法。
+写类继承`UsernamePasswordAuthenticationFilter`类，重写`attempAuthentication`方法，验证成功调用`successfulAuthentication`方法，失败调用`unsuccessfulAuthentication`方法。
 
 中间的验证与数据库比对信息需要实现`UserDetailsService`接口，编写查询数据库过程，返回`User`对象（安全框架提供的对象）。
 
@@ -76,7 +76,7 @@ web应用安全解决方案
 + 需要准备配置类把密码加密配置好
 + 实现自定义登录逻辑
   + 实现UserDetailsService接口
-  + loadUserByUsername方法
+  + 重写loadUserByUsername方法
     + 根据username去数据库查询获取用户对象
     + 根据用户对象的密码和传入的密码比较，确认是否登录
       + User类中的权限信息用工具类`AuthorityUtils`创建权限

@@ -165,7 +165,9 @@ nodes （rabbitmq默认存储在内存）
 
 队列
 
-用户
+用户：
+
+![image-20201230204422355](01_RabbitMQ.assets/image-20201230204422355.png)
 
 Tags
 
