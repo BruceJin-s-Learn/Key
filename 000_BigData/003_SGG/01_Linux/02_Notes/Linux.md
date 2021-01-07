@@ -125,11 +125,10 @@ xftp必须注意协议使用SFTP，这样端口是22.
 ## 4.Linux实操
 
 + `cd`为change directory,切换目录
-
++ `^`为定位符号
 + ip:
-  + `ip addr``
+  + `ip addr`
   + ``ifconfig`
-
 + 基本概念
   + <img src="Linux.assets/image-20210105104906041.png" alt="image-20210105104906041" style="zoom:67%;" />
 + 文件类型见权限
@@ -1008,10 +1007,19 @@ systemctl
 #防火墙iptables
 #查看
 service iptables status
-#关闭(立马生效)
+systemctl status firewalld
+#暂时关闭(立马生效)
 service iptables stop
+systemctl stop firewalld
+#永久关闭
+chkconfig iptables off
+systemctl disable firewalld
 #重启
 service iptables restart
+systemctl enable firewalld
+
+#安装Firewalld（centos7新）
+yum install firewalld
 
 #检查Linux的某个端口是否在监听并可访问
 telnet ip号 端口号 #telnet 192.168.10.100 22
@@ -1226,3 +1234,79 @@ chkconfig
 进程：ps -aux | grep 进程名
 
 io读写：iotop （没有通过yum安装）（观察大内存读写）
+
+
+
+
+
+## 6.相关
+
+### 6.1 Linux配jdk
+
++ 解压jdk
+
++ 配环境变量
+
+  + ```bash
+    vim /etc/profile
+    ------------------------------
+    #找到export
+    #注释掉
+    #export PATH XXX
+    export JAVA_HOME=/usr/local/jdk
+    export PATH=$JAVA_HOME/bin:$PATH
+    ------------------------------------
+    #想让这个文件生效，必须source
+    source /etc/profile
+    #查看jdk版本
+    java -version
+    ```
+
+### 6.2 安装vim
+
++ ```bash
+  #查看Linux系统版本
+  lsb_release -a
+  
+  #根据版本输入命令
+  #centos
+  yum -y install vim*
+  #Ubuntu
+  sudo apt-get install vim-gtk
+  ```
+
+### 6.3 安装无法连接库
+
+问题：
+
+```bash 
+Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was
+12: Timeout on http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock: (28, 'Resolving timed out after 30569 milliseconds')
+```
+
+解决：
+
+```bash
+#查看是否有网
+ping www.baidu.com
+
+#查看网卡
+nmcli d
+#编辑网卡
+cd /etc/sysconfig/network-scripts/ | ls
+vim ifcfg-ens33
+#查看网关等是否正确
+------------------------------------------
+BOOTPROTO=static
+ONBOOT=yes
+-------------------------------------------
+
+#重启网络
+systemctl restart network
+#再ping
+
+#注意各虚拟机配网的一致性，除了ip
+```
+
+
+

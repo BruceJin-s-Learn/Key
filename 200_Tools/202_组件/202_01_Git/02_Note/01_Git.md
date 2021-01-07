@@ -32,13 +32,13 @@ git config --global user.name ""
 git config --global user.email ""
 ```
 
-![image-20201208104854055](Git.assets/image-20201208104854055.png)
+![image-20201208104854055](01_Git.assets/image-20201208104854055.png)
 
 ## .4 Git三种状态和工作模式
 
 4.1 工作模式及工作区域
 
-![image-20201208105925485](Git.assets/image-20201208105925485.png)
+![image-20201208105925485](01_Git.assets/image-20201208105925485.png)
 
 工作区、暂存区、git仓库
 
@@ -160,7 +160,7 @@ git fach // 查看状态
 
 两个以上的分支同时commit后会造成
 
-![image-20201209215234499](Git.assets/image-20201209215234499.png)
+![image-20201209215234499](01_Git.assets/image-20201209215234499.png)
 
 主动修改本地文件然后提交
 
@@ -201,13 +201,13 @@ git tag -d name //本地
 
 > idea 添加：启动页 -> configure -> settings -> version control -> git
 
-![image-20201210095952619](Git.assets/image-20201210095952619.png)
+![image-20201210095952619](01_Git.assets/image-20201210095952619.png)
 
 ### 11.1 远程到本地
 
 file -> new -> project from version control
 
-![image-20201210102150293](Git.assets/image-20201210102150293.png)
+![image-20201210102150293](01_Git.assets/image-20201210102150293.png)
 
 ### 11.2 本地到远程
 
