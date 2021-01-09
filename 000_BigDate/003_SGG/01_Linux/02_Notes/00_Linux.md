@@ -12,7 +12,7 @@ Linux必须**至少有三个**分区
 
   + 200M左右
 
-    <img src="Linux.assets/image-20210104164829587.png" alt="image-20210104164829587" style="zoom:50%;" />
+    <img src="00_Linux.assets/image-20210104164829587.png" alt="image-20210104164829587" style="zoom:50%;" />
 
   
 
@@ -24,7 +24,7 @@ Linux必须**至少有三个**分区
 
   + 作用：在内存不够用时，临时充当内存，效率比物理内存低，但比硬盘高。
 
-    <img src="Linux.assets/image-20210104165005384.png" alt="image-20210104165005384" style="zoom:50%;" />
+    <img src="00_Linux.assets/image-20210104165005384.png" alt="image-20210104165005384" style="zoom:50%;" />
 
 + /
 
@@ -32,11 +32,11 @@ Linux必须**至少有三个**分区
 
   + Linux主要是挂载的方式，根分区包括其他的分区或文件
 
-    <img src="Linux.assets/image-20210104165220183.png" alt="image-20210104165220183" style="zoom:50%;" />
+    <img src="00_Linux.assets/image-20210104165220183.png" alt="image-20210104165220183" style="zoom:50%;" />
 
 分区效果：
 
-+ <img src="Linux.assets/image-20210104165247429.png" alt="image-20210104165247429" style="zoom:80%;" />
++ <img src="00_Linux.assets/image-20210104165247429.png" alt="image-20210104165247429" style="zoom:80%;" />
 
 ### 1.2 Kdump
 
@@ -54,23 +54,25 @@ net模式
 
 + linux中一切皆文件
 
-  <img src="Linux.assets/image-20210104172212383.png" alt="image-20210104172212383" style="zoom:67%;" />
+  <img src="00_Linux.assets/image-20210104172212383.png" alt="image-20210104172212383" style="zoom:67%;" />
 
 
 
 ### 2.1 具体的目录结构
 
-<img src="Linux.assets/image-20210104172459737.png" alt="image-20210104172459737" style="zoom: 67%;" />
+<img src="00_Linux.assets/image-20210104172459737.png" alt="image-20210104172459737" style="zoom: 67%;" />
 
-<img src="Linux.assets/image-20210104172516545.png" alt="image-20210104172516545" style="zoom: 67%;" />
+<img src="00_Linux.assets/image-20210104172516545.png" alt="image-20210104172516545" style="zoom: 67%;" />
 
-<img src="Linux.assets/image-20210104172557373.png" alt="image-20210104172557373" style="zoom:67%;" />
+<img src="00_Linux.assets/image-20210104172557373.png" alt="image-20210104172557373" style="zoom:67%;" />
 
 proc和srv和sys轻易不要动
 
-<img src="Linux.assets/image-20210104172632448.png" alt="image-20210104172632448" style="zoom:67%;" />![image-20210104172815631](Linux.assets/image-20210104172815631.png)
+<img src="00_Linux.assets/image-20210104172632448.png" alt="image-20210104172632448" style="zoom:67%;" />
 
-<img src="Linux.assets/image-20210104172927894.png" alt="image-20210104172927894" style="zoom:67%;" />
++ ![image-20210104172815631](00_Linux.assets/image-20210104172815631.png)
+
+<img src="00_Linux.assets/image-20210104172927894.png" alt="image-20210104172927894" style="zoom:67%;" />
 
 selinux类似于360
 
@@ -96,20 +98,20 @@ Linux虚拟机需开启sshd服务，该服务会监听22端口。
 
 + 重启网络centos7以上`systemctl restart network`或centos7以下`service network restart`
 
-<img src="Linux.assets/Image.png" alt="Image" style="zoom:67%;" />
+<img src="00_Linux.assets/Image.png" alt="Image" style="zoom:67%;" />
 
 + `reboot`重启Linux
 + 注意：
   + 第一点：虚拟机的Net模式静态ip由这里设置网段
-    + <img src="Linux.assets/image-20210105095022571.png" alt="image-20210105095022571" />
+    + <img src="00_Linux.assets/image-20210105095022571.png" alt="image-20210105095022571" />
   + 第二点：这里对应v8网段不是本地网络
-    + ![img](Linux.assets/20190924135247191.png)
+    + ![img](00_Linux.assets/20190924135247191.png)
 
 ### 3.3 文件传输
 
 xftp必须注意协议使用SFTP，这样端口是22.
 
-解决乱码：<img src="Linux.assets/image-20210104190420867.png" alt="image-20210104190420867" style="zoom:50%;" />
+解决乱码：<img src="00_Linux.assets/image-20210104190420867.png" alt="image-20210104190420867" style="zoom:50%;" />
 
 
 
@@ -118,7 +120,7 @@ xftp必须注意协议使用SFTP，这样端口是22.
 + 远程登录Linux软件（同xshell）
 + 大数据开发常用
 + 细节：中文乱码
-  + <img src="Linux.assets/image-20210104191241117.png" alt="image-20210104191241117" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210104191241117.png" alt="image-20210104191241117" style="zoom:67%;" />
 
 
 
@@ -130,7 +132,7 @@ xftp必须注意协议使用SFTP，这样端口是22.
   + `ip addr`
   + ``ifconfig`
 + 基本概念
-  + <img src="Linux.assets/image-20210105104906041.png" alt="image-20210105104906041" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105104906041.png" alt="image-20210105104906041" style="zoom:67%;" />
 + 文件类型见权限
 + 查看信息太多可以用管道命令和more结合
   + 例如 `xxxx | more`
@@ -145,7 +147,7 @@ xftp必须注意协议使用SFTP，这样端口是22.
 
 #### 4.1.2 转换
 
-<img src="Linux.assets/image-20210104192242365.png" alt="image-20210104192242365" style="zoom: 67%;" />
+<img src="00_Linux.assets/image-20210104192242365.png" alt="image-20210104192242365" style="zoom: 67%;" />
 
 #### 4.1.3 快捷键
 
@@ -230,7 +232,7 @@ usermod -g 新用户组 用户名
 
 **概念：**
 
-<img src="Linux.assets/image-20210104194447895.png" alt="image-20210104194447895" style="zoom:50%;" />
+<img src="00_Linux.assets/image-20210104194447895.png" alt="image-20210104194447895" style="zoom:50%;" />
 
 + 通过用户组管理权限
 + 通过家目录授予用户可编辑的文件
@@ -239,7 +241,7 @@ usermod -g 新用户组 用户名
 
 **相关文件：**
 
-<img src="Linux.assets/image-20210104201623669.png" alt="image-20210104201623669" style="zoom:67%;" />
+<img src="00_Linux.assets/image-20210104201623669.png" alt="image-20210104201623669" style="zoom:67%;" />
 
 ### 4.4 实用指令
 
@@ -288,7 +290,7 @@ tree
 
 **概念：**
 
-<img src="Linux.assets/image-20210104202419842.png" alt="image-20210104202419842" style="zoom:67%;" />
+<img src="00_Linux.assets/image-20210104202419842.png" alt="image-20210104202419842" style="zoom:67%;" />
 
 + 3号用的最多
 
@@ -303,13 +305,13 @@ tree
 步骤：
 
 + 开机，在引导时输入 enter键，看到一个界面
-  + <img src="Linux.assets/image-20210104204037554.png" alt="image-20210104204037554" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210104204037554.png" alt="image-20210104204037554" style="zoom:50%;" />
 + 输入`e`，再看到一个新的界面，选中第二行（编辑内核）
-  + <img src="Linux.assets/image-20210104204115805.png" alt="image-20210104204115805" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210104204115805.png" alt="image-20210104204115805" style="zoom:50%;" />
 + 在输入`e`，在这行最后输入 `1`，再enter
-  + <img src="Linux.assets/image-20210104204149038.png" alt="image-20210104204149038" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210104204149038.png" alt="image-20210104204149038" style="zoom:50%;" />
 + 再次输入`b`，则会进入单用户模式
-  + <img src="Linux.assets/image-20210104204220832.png" alt="image-20210104204220832" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210104204220832.png" alt="image-20210104204220832" style="zoom:50%;" />
 + `passwd`修改root密码
 
 #### 4.4.2 帮助指令
@@ -415,7 +417,7 @@ history 10 #最近10个
 
 + 绝对路径：从根目录开始定位
 + 相对路径：从当前目录到指定目录
-+ <img src="Linux.assets/image-20210104220002127.png" alt="image-20210104220002127" style="zoom:67%;" />
++ <img src="00_Linux.assets/image-20210104220002127.png" alt="image-20210104220002127" style="zoom:67%;" />
 + `tail -f 文件` 实时追踪该文档所有更新，工作中常用（日志、安全）
 
 #### 4.4.5 时间日期类
@@ -579,7 +581,7 @@ chgrp 新组 文件名
 **概念：**
 
 + 文件的类型（5种）
-  + <img src="Linux.assets/image-20210105110043129.png" alt="image-20210105110043129" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105110043129.png" alt="image-20210105110043129" style="zoom:67%;" />
   + `-`普通文件
   + `d`目录
   + `l`软链接文件
@@ -593,20 +595,20 @@ chgrp 新组 文件名
     + 文件所在组用户权限
     + 文件其他组用户权限
 + Linux中文件显示出来的意思
-  + <img src="Linux.assets/image-20210105110900628.png" alt="image-20210105110900628" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105110900628.png" alt="image-20210105110900628" style="zoom:67%;" />
 + 权限（rwx）
   + 文件
-    + <img src="Linux.assets/image-20210105111143124.png" alt="image-20210105111143124" style="zoom:67%;" />
+    + <img src="00_Linux.assets/image-20210105111143124.png" alt="image-20210105111143124" style="zoom:67%;" />
   + 目录
-    + <img src="Linux.assets/image-20210105111156071.png" alt="image-20210105111156071" style="zoom:67%;" />
+    + <img src="00_Linux.assets/image-20210105111156071.png" alt="image-20210105111156071" style="zoom:67%;" />
   + 还可用数字表示
     + r=4,w=2,x=1
     + rwx=4+2+1=7
 + 练习
   + 练习一
-    + <img src="Linux.assets/image-20210105114603579.png" alt="image-20210105114603579" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105114603579.png" alt="image-20210105114603579" style="zoom:50%;" />
   + 练习二
-    + <img src="Linux.assets/image-20210105114647383.png" alt="image-20210105114647383" style="zoom:67%;" />
+    + <img src="00_Linux.assets/image-20210105114647383.png" alt="image-20210105114647383" style="zoom:67%;" />
 
 ### 4.6 定时任务调度
 
@@ -660,18 +662,18 @@ crontab -e
 
 + 原理
 
-  + <img src="Linux.assets/image-20210105115729375.png" alt="image-20210105115729375" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105115729375.png" alt="image-20210105115729375" style="zoom:50%;" />
   + 步骤
     + 编写脚本
     + 设置crontab
 
 + 例子
 
-  + <img src="Linux.assets/image-20210105115820374.png" alt="image-20210105115820374" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105115820374.png" alt="image-20210105115820374" style="zoom:67%;" />
   + 特殊符号
-    + <img src="Linux.assets/image-20210105125927242.png" alt="image-20210105125927242" style="zoom:67%;" />
+    + <img src="00_Linux.assets/image-20210105125927242.png" alt="image-20210105125927242" style="zoom:67%;" />
   + 特定时间
-    + <img src="Linux.assets/image-20210105125852604.png" alt="image-20210105125852604" style="zoom:67%;" />
+    + <img src="00_Linux.assets/image-20210105125852604.png" alt="image-20210105125852604" style="zoom:67%;" />
 
   
 
@@ -702,7 +704,7 @@ crontab -e
 
 ##### 4.7.1.2 windows分区
 
-+ <img src="Linux.assets/image-20210105140637831.png" alt="image-20210105140637831" style="zoom: 67%;" />
++ <img src="00_Linux.assets/image-20210105140637831.png" alt="image-20210105140637831" style="zoom: 67%;" />
 
 ##### 4.7.1.3 Linux分区
 
@@ -718,7 +720,7 @@ crontab -e
   + 它的整个文件系统中包含了一整套的文件和目录，且将一个分区和一个目录联系起来。
   + 这时要载入的一个分区将使它的存储空间在一个目录下获得
 + 示意图
-  + <img src="Linux.assets/image-20210105141503884.png" alt="image-20210105141503884" style="zoom: 67%;" />
+  + <img src="00_Linux.assets/image-20210105141503884.png" alt="image-20210105141503884" style="zoom: 67%;" />
 
 **硬盘说明**
 
@@ -733,9 +735,9 @@ crontab -e
     + 同上
 + 查看系统分区情况
   + `lsblk -f`
-    + <img src="Linux.assets/image-20210105142555054.png" alt="image-20210105142555054" style="zoom:67%;" />
+    + <img src="00_Linux.assets/image-20210105142555054.png" alt="image-20210105142555054" style="zoom:67%;" />
   + `lsblk` 可查看大小
-    + <img src="Linux.assets/image-20210105142701403.png" alt="image-20210105142701403" style="zoom:67%;" />
+    + <img src="00_Linux.assets/image-20210105142701403.png" alt="image-20210105142701403" style="zoom:67%;" />
 
 
 
@@ -751,7 +753,7 @@ lsblk #可查看大小
 
 **需求：**给Linux系统增加一个硬盘，并挂载到/home/newdisk/
 
-+ <img src="Linux.assets/image-20210105143208662.png" alt="image-20210105143208662" style="zoom:67%;" />
++ <img src="00_Linux.assets/image-20210105143208662.png" alt="image-20210105143208662" style="zoom:67%;" />
 
 **步骤：**
 
@@ -766,15 +768,15 @@ lsblk #可查看大小
 + vmware中
 
   + 虚拟机->设置->硬盘->添加->选硬盘，下一步
-    + <img src="Linux.assets/image-20210105143548135.png" alt="image-20210105143548135" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105143548135.png" alt="image-20210105143548135" style="zoom:50%;" />
   + 选SCSI(S)
-    + <img src="Linux.assets/image-20210105143659728.png" alt="image-20210105143659728" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105143659728.png" alt="image-20210105143659728" style="zoom:50%;" />
   + 创建新的虚拟磁盘
-    + <img src="Linux.assets/image-20210105143747490.png" alt="image-20210105143747490" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105143747490.png" alt="image-20210105143747490" style="zoom:50%;" />
   + 分配所需容量
-    + <img src="Linux.assets/image-20210105143822506.png" alt="image-20210105143822506" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105143822506.png" alt="image-20210105143822506" style="zoom:50%;" />
   + 磁盘文件名
-    + <img src="Linux.assets/image-20210105143902904.png" alt="image-20210105143902904" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105143902904.png" alt="image-20210105143902904" style="zoom:50%;" />
 
 + 终端
 
@@ -828,9 +830,9 @@ lsblk #可查看大小
     umount /dev/sdb1
     ```
 
-  + <img src="Linux.assets/image-20210105145549540.png" alt="image-20210105145549540" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105145549540.png" alt="image-20210105145549540" style="zoom:50%;" />
 
-  + <img src="Linux.assets/image-20210105145832383.png" alt="image-20210105145832383" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105145832383.png" alt="image-20210105145832383" style="zoom:50%;" />
 
 #### 4.7.3 磁盘情况
 
@@ -859,19 +861,19 @@ du -ach --max-depth=1 /opt
 #### 4.8.1 原理
 
 + NAT模式
-  + <img src="Linux.assets/image-20210105153310823.png" alt="image-20210105153310823" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105153310823.png" alt="image-20210105153310823" style="zoom:67%;" />
 + 看3.2指定静态ip
 + 查看虚拟网络
-  + <img src="Linux.assets/image-20210105095022571.png" alt="image-20210105095022571" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105095022571-1610175342816.png" alt="image-20210105095022571" style="zoom:50%;" />
 + 查看网关
-  + <img src="Linux.assets/image-20210105153804765.png" alt="image-20210105153804765" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105153804765.png" alt="image-20210105153804765" style="zoom:50%;" />
 + 查看windows中VMnet8网络配置（ipconfig指令）
   + 使用ipconfig查看
   + 界面查看
-    + <img src="Linux.assets/image-20210105154057144.png" alt="image-20210105154057144" style="zoom: 33%;" />
-    + <img src="Linux.assets/image-20210105154125139.png" alt="image-20210105154125139" style="zoom:50%;" />
-    + <img src="Linux.assets/image-20210105154200795.png" alt="image-20210105154200795" style="zoom:50%;" />
-    + 老师的为<img src="Linux.assets/image-20210105154213962.png" alt="image-20210105154213962" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105154057144.png" alt="image-20210105154057144" style="zoom: 33%;" />
+    + <img src="00_Linux.assets/image-20210105154125139.png" alt="image-20210105154125139" style="zoom:50%;" />
+    + <img src="00_Linux.assets/image-20210105154200795.png" alt="image-20210105154200795" style="zoom:50%;" />
+    + 老师的为<img src="00_Linux.assets/image-20210105154213962.png" alt="image-20210105154213962" style="zoom:50%;" />
 + 测试：ping www.baidu.com
 
 #### 4.8.2 配置
@@ -879,15 +881,15 @@ du -ach --max-depth=1 /opt
 ##### 4.8.2.1 自动获取
 
 + 图形界面
-  + <img src="Linux.assets/image-20210105154638156.png" alt="image-20210105154638156" style="zoom:50%;" />
-  + <img src="Linux.assets/image-20210105154706680.png" alt="image-20210105154706680" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105154638156.png" alt="image-20210105154638156" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105154706680.png" alt="image-20210105154706680" style="zoom:50%;" />
 + 缺点：每次自动获取的ip不一定一样。
   + 不适用于做服务器（服务器ip需固定）
 
 ##### 4.8.2.2 指定固定ip
 
 + 见3.2指定静态ip
-+ <img src="Linux.assets/image-20210105155230727.png" alt="image-20210105155230727" style="zoom:67%;" />
++ <img src="00_Linux.assets/image-20210105155230727.png" alt="image-20210105155230727" style="zoom:67%;" />
 + DNS为域名解释器
 
 ### 4.9 修改主机名
@@ -903,7 +905,7 @@ echo $HOSTNAME
 
 **概念**
 
-+ <img src="Linux.assets/image-20210105155956337.png" alt="image-20210105155956337" style="zoom:50%;" />
++ <img src="00_Linux.assets/image-20210105155956337.png" alt="image-20210105155956337" style="zoom:50%;" />
 + ping的原理
   + 因为hosts文件中存在所要ping的地址与网络的映射联系
   + 一般如百度这些是在外网的映射关系中
@@ -948,11 +950,11 @@ pstree [选项]
 **概念**
 
 + ps指令显示的信息
-  + <img src="Linux.assets/image-20210105161340481.png" alt="image-20210105161340481" style="zoom:67%;" />
-  + <img src="Linux.assets/image-20210105161731638.png" alt="image-20210105161731638" style="zoom: 50%;" />
-  + <img src="Linux.assets/image-20210105161925965.png" alt="image-20210105161925965" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105161340481.png" alt="image-20210105161340481" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105161731638.png" alt="image-20210105161731638" style="zoom: 50%;" />
+  + <img src="00_Linux.assets/image-20210105161925965.png" alt="image-20210105161925965" style="zoom:50%;" />
 + 应用实例
-  + <img src="Linux.assets/image-20210105162138211.png" alt="image-20210105162138211" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105162138211.png" alt="image-20210105162138211" style="zoom:67%;" />
 
 #### 4.10.3 终止进程的命令
 
@@ -988,7 +990,7 @@ kill -9 终端进程号
 **概念**
 
 + 案例1
-  + <img src="Linux.assets/image-20210105163111550.png" alt="image-20210105163111550" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105163111550.png" alt="image-20210105163111550" style="zoom:50%;" />
 
 
 
@@ -1057,10 +1059,10 @@ cd /etc/init.d/服务名称
 + 介绍：
   + 服务（service）本质就是进程，但是是运行在后台的，通常会监听某个端口，等待其他程序的请求，比如（mysql，sshd防火墙等），因此我们又称为**守护进程**:bangbang:
 + 原理图
-  + <img src="Linux.assets/image-20210105164502163.png" alt="image-20210105164502163" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105164502163.png" alt="image-20210105164502163" style="zoom:50%;" />
 + 服务运行级别（runlevel）对应4.4.1
-  + <img src="Linux.assets/image-20210105165545925.png" alt="image-20210105165545925" style="zoom:67%;" />
-  + <img src="Linux.assets/image-20210105170857361.png" alt="image-20210105170857361" style="zoom:50%;" />
+  + <img src="00_Linux.assets/image-20210105165545925.png" alt="image-20210105165545925" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105170857361.png" alt="image-20210105170857361" style="zoom:50%;" />
 
 #### 4.11.2 监控服务
 
@@ -1095,7 +1097,7 @@ top -d 10
   + `N`以PID排序
   + `q`退出top
 + 显示参数
-  + <img src="Linux.assets/image-20210105171924256.png" alt="image-20210105171924256" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105171924256.png" alt="image-20210105171924256" style="zoom:67%;" />
 
 ##### 4.11.2.2 监控网络状态
 
@@ -1114,7 +1116,7 @@ netstat -anp | more
 **概念**
 
 + 查看
-  + <img src="Linux.assets/image-20210105172907513.png" alt="image-20210105172907513" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105172907513.png" alt="image-20210105172907513" style="zoom:67%;" />
 
 ### 4.12 RPM与YUM包管理
 
@@ -1176,11 +1178,11 @@ rpm -ivh firefox-xxx
 **概念**
 
 + RPM介绍
-  + <img src="Linux.assets/image-20210105173133627.png" alt="image-20210105173133627" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105173133627.png" alt="image-20210105173133627" style="zoom:67%;" />
 + RPM包基本格式
-  + <img src="Linux.assets/image-20210105173411278.png" alt="image-20210105173411278" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105173411278.png" alt="image-20210105173411278" style="zoom:67%;" />
 + RPM包其他查询指令
-  + <img src="Linux.assets/image-20210105173816374.png" alt="image-20210105173816374" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105173816374.png" alt="image-20210105173816374" style="zoom:67%;" />
 
 
 
@@ -1199,11 +1201,11 @@ yum install xxx #下载安装
 **概念**
 
 + 介绍
-  + <img src="Linux.assets/image-20210105180047618.png" alt="image-20210105180047618" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105180047618.png" alt="image-20210105180047618" style="zoom:67%;" />
   + 优点：
     + 自动处理依赖性关系
 + 原理
-  + <img src="Linux.assets/image-20210105183807022.png" alt="image-20210105183807022" style="zoom:67%;" />
+  + <img src="00_Linux.assets/image-20210105183807022.png" alt="image-20210105183807022" style="zoom:67%;" />
 
 ## 5.面试题
 

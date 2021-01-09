@@ -213,15 +213,34 @@ Curator 3.x.x-兼容兼容zk 3.5。
 
 + 对应`src/main/java/com/ego/dubbo/service/impl/ManagerDubboServiceImpl.java`
 
+#### 12.3 manage（consumer）中
+
++ `src/main/java/com/ego/service/ManagerService.java`
++ 
+
 ### 13.service的导入
 
 + 不同模块导入的不同
 
 + provider 中导入apache的
-  + `import org.apache.dubbo.config.annotation.Service;`
-
+  
++ `import org.apache.dubbo.config.annotation.Service;`
+  
 + manage（consumer）中导入spring 的
-  + ``
+  
+  + ```java
+    //consumer的注解是spring的
+    ```
+    
+  + `import org.springframework.stereotype.Service;`
+  
+  + ```java
+    /**
+     * 视图逻辑
+     * 页面要什么？页面要的就是方法的返回值
+     * 页面能传过来什么？就是方法的参数
+     */
+    ```
 
 ### 14.mapper问题
 
