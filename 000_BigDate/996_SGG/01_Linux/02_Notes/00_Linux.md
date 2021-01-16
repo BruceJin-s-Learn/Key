@@ -44,7 +44,7 @@ Linux必须**至少有三个**分区
 
 生产环境中需要，日常学习可以不用。
 
-### 1.3.联网问题
+## 1.3.联网问题
 
 net模式
 
@@ -55,6 +55,8 @@ net模式
 + linux中一切皆文件
 
   <img src="00_Linux.assets/image-20210104172212383.png" alt="image-20210104172212383" style="zoom:67%;" />
+
++ <img src="00_Linux.assets/image-20210112153229368.png" alt="image-20210112153229368" style="zoom:67%;" />
 
 
 
@@ -103,23 +105,43 @@ Linux虚拟机需开启sshd服务，该服务会监听22端口。
 + `reboot`重启Linux
 + 注意：
   + 第一点：虚拟机的Net模式静态ip由这里设置网段
+    + 255表示不能动
     + <img src="00_Linux.assets/image-20210105095022571.png" alt="image-20210105095022571" />
   + 第二点：这里对应v8网段不是本地网络
     + ![img](00_Linux.assets/20190924135247191.png)
 
 ### 3.3 文件传输
 
-xftp必须注意协议使用SFTP，这样端口是22.
+#### 3.3.1 工具
+
+xftp必须注意==协议使用SFTP==，这样端口是22。+
 
 解决乱码：<img src="00_Linux.assets/image-20210104190420867.png" alt="image-20210104190420867" style="zoom:50%;" />
 
+#### 3.3.2 命令
 
++ `yum install -y lrzsz`
++ `rz`传入Linux，`sz`传出Linux
+
+#### 3.3.3 Linux->Linux
+
++ scp  源数据地址(source)  目标数据地址(target)
+
++ ```bash
+  scp apache-tomcat-7.0.61.tar.gz root@192.168.31.44:/opt
+  scp root@192.168.31.44:/opt/apache-tomcat-7.0.61.tar.gz ./
+  #递归传送一个目录
+  scp -r apache-tomcat-7.0.61 root@192.168.31.44:/opt
+  
+  scp test.sh 192.168.4.99:`pwd`
+  ```
 
 ### 3.4 SecureCRT
 
 + 远程登录Linux软件（同xshell）
 + 大数据开发常用
 + 细节：中文乱码
++ alt+p文件传输
   + <img src="00_Linux.assets/image-20210104191241117.png" alt="image-20210104191241117" style="zoom:67%;" />
 
 
@@ -128,6 +150,7 @@ xftp必须注意协议使用SFTP，这样端口是22.
 
 + `cd`为change directory,切换目录
 + `^`为定位符号
++ `-r`这个参数一般表示递归
 + ip:
   + `ip addr`
   + ``ifconfig`
@@ -136,6 +159,9 @@ xftp必须注意协议使用SFTP，这样端口是22.
 + 文件类型见权限
 + 查看信息太多可以用管道命令和more结合
   + 例如 `xxxx | more`
++ `source`一些配置文件的刷新，进行持久化修改
++ `ctrl+l`在xshell中是清屏
++ `alt+s`在xshell中是去掉边框显示屏幕
 
 ### 4.1 vi & vim
 
@@ -183,6 +209,7 @@ xftp必须注意协议使用SFTP，这样端口是22.
 #### 4.2.2用户注销
 
 + `logout`注销（图形界面下无效）
++ `exit`注销（很多软件服务都可用）
 
 ### 4.3 用户管理
 
@@ -212,11 +239,17 @@ whoami
 
 #用户组============================================================
 #类似角色，对有共性的用户统一管理
+#查看
+groups
+
 #添加
 groupadd name
 
 #删除
 groupdel name
+
+#改名
+groupmod -n oldgroupname newgroupname
 
 #创建用户分配组（前提有组）
 useradd -g 用户组 name
@@ -298,21 +331,53 @@ tree
 
 **找回root密码？？？**
 
-思路：进入单用户模式，修改root密码（进入单用户模式，不需要root密码）。
+方法一：
 
-前提是`在电脑身边修改，不可远程修改。`
++ 思路：进入单用户模式，修改root密码（进入单用户模式，不需要root密码）。
 
-步骤：
++ 前提是`在电脑身边修改，不可远程修改。`
 
-+ 开机，在引导时输入 enter键，看到一个界面
-  + <img src="00_Linux.assets/image-20210104204037554.png" alt="image-20210104204037554" style="zoom:50%;" />
-+ 输入`e`，再看到一个新的界面，选中第二行（编辑内核）
-  + <img src="00_Linux.assets/image-20210104204115805.png" alt="image-20210104204115805" style="zoom:50%;" />
-+ 在输入`e`，在这行最后输入 `1`，再enter
-  + <img src="00_Linux.assets/image-20210104204149038.png" alt="image-20210104204149038" style="zoom:50%;" />
-+ 再次输入`b`，则会进入单用户模式
-  + <img src="00_Linux.assets/image-20210104204220832.png" alt="image-20210104204220832" style="zoom:50%;" />
-+ `passwd`修改root密码
++ 步骤：
+  + 开机，在引导时输入 enter键，看到一个界面
+    + <img src="00_Linux.assets/image-20210104204037554.png" alt="image-20210104204037554" style="zoom:50%;" />
+  + 输入`e`，再看到一个新的界面，选中第二行（编辑内核）
+    + <img src="00_Linux.assets/image-20210104204115805.png" alt="image-20210104204115805" style="zoom:50%;" />
+  + 在输入`e`，在这行最后输入 `1`，再enter
+    + <img src="00_Linux.assets/image-20210104204149038.png" alt="image-20210104204149038" style="zoom:50%;" />
+  + 再次输入`b`，则会进入单用户模式
+    + <img src="00_Linux.assets/image-20210104204220832.png" alt="image-20210104204220832" style="zoom:50%;" />
+  + `passwd`修改root密码
+
+  方法二：
+
+  + 进入开机状态按`e`
+    + <img src="00_Linux.assets/1516063-20190121232616063-1633094875.jpg" alt="img" style="zoom:67%;" />
+    + <img src="00_Linux.assets/1516063-20190121234919271-2059974249.jpg" alt="img" style="zoom:67%;" />
+  + 按方向键下，定位到`fi`的下一行，找到`ro`一行，这个意思是read only，将`ro`替换成`rw init=/sysroot/bin/sh`，如图
+    + <img src="00_Linux.assets/1516063-20190121232701851-1929423638.jpg" alt="img" style="zoom:67%;" />
+  + 按`ctrl + x`进行重启进入单用户模式
+
++ 执行`chroot /sysroot`。chroot命令用来切换系统，/sysroot/目录就是原始系统
+
+  + ```bash
+    :/# chroot /sysroot
+    :/#
+    ```
+
++ 修改root密码
+
+  + passwd是修改root密码的命令，`touch /.autorelabel` 执行这行命令作用是让SELinux生效，如果不执行，密码不会生效。按Ctrl+D，执行reboot重启生效。如下图
+  + ![img](00_Linux.assets/1516063-20190121234155044-110969254.jpg)
+
++ 其他
+
+  + 如果因为启用x-window或者显卡驱动更新，无法进入桌面，可以修改默认启动级别（开机进入命令行模式）
+
+    + ```bash
+      systemctl set-default multi-user.target  #设置成命令模式
+      init 3 # 切换到字符模式，有时只使用上面的语句没有效果
+      按下Ctrl+D后，执行reboot
+      ```
 
 #### 4.4.2 帮助指令
 
@@ -404,11 +469,17 @@ tail -f 文件 #实时追踪该文档所有更新，工作中常用
 ln -s 源文件或目录 软链接名
 cd 软链接名/ #到源文件,但位置没变（pwd）
 rm -rf 软链接名 #删除时，软链接后不要带/，否则资源忙
+cp -d 也可软链接
 
 #历史指令（工作常用，可执行）
 history #所有
 history 10 #最近10个
 !历史编号 #!178 执行历史178的指令
+
+#分区信息
+df -h
+#文件系统(也适用HDFS)
+du -h 
 ```
 
 
@@ -469,6 +540,9 @@ grep [选项] 查找内容 源文件
 grep -n  #显示匹配行和行号
 grep -i  #忽略大小写
 cat hello.txt | grep yes #查看hello.txt文件并查找yes
+
+whereis name
+#平时少用ls，多用查找
 ```
 
 #### 4.4.7 压缩和解压类
@@ -587,7 +661,7 @@ chgrp 新组 文件名
   + `l`软链接文件
   + `c`字符设备（键盘、鼠标）
   + `b`块文件、硬盘
-+ 文件最前面的意思
++ 文件最前面的意思(UGO模型)
   + `-rw-r--r--`
   + 可分为四部分`-`，`rw-`，`r--`，`r--`
     + 文件类型
@@ -610,9 +684,9 @@ chgrp 新组 文件名
   + 练习二
     + <img src="00_Linux.assets/image-20210105114647383.png" alt="image-20210105114647383" style="zoom:67%;" />
 
-### 4.6 定时任务调度
+### 4.6 定时任务调度:bangbang::bangbang:
 
-crond
+crond+玩法较多，可以设置自动校准时间，自定开启服务等
 
 **命令：**
 
@@ -624,6 +698,7 @@ crontab [选项]
 -f #删除当前用户所有的crontab任务
 crontab -r #终止任务调度
 service crond restart #重启任务调度
+systemctl status|restart|stop crond.service
 
 #实例==============================================================
 #第一个：每隔1分钟，将当前的日期信息，追加到/tmp/mydate 文件中-----------
@@ -665,7 +740,8 @@ crontab -e
   + <img src="00_Linux.assets/image-20210105115729375.png" alt="image-20210105115729375" style="zoom:50%;" />
   + 步骤
     + 编写脚本
-    + 设置crontab
+    + 设置crontab                                                                                                                                                                                                                                                                                                               
+  + ![image-20210115114326395](00_Linux.assets/image-20210115114326395.png)
 
 + 例子
 
@@ -892,7 +968,21 @@ du -ach --max-depth=1 /opt
 + <img src="00_Linux.assets/image-20210105155230727.png" alt="image-20210105155230727" style="zoom:67%;" />
 + DNS为域名解释器
 
+#### 4.8.3 命令
+
++ ```bash
+  #查看当前网络状态
+  netstat
+  #见4.11.1基础服务中
+  telnet
+  
+  ```
+
++ 
+
 ### 4.9 修改主机名
+
+#### 4.9.1 查看修改
 
 **命令**
 
@@ -901,6 +991,13 @@ du -ach --max-depth=1 /opt
 echo $HOSTNAME
 
 #ping主机名不成功，因为ip和主机名没有映射起来
+vi /etc/hosthome
+
+# restful 我们所有的资源在网络上中都有唯一的定位
+# 那么我们可以通过这个唯一定位标识指定的资源
+# http://localhost:8080/sxt/user.action/666
+# curl -X GET http://www.baidu.com 
+curl -X GET http://www.baidu.com
 ```
 
 **概念**
@@ -909,10 +1006,18 @@ echo $HOSTNAME
 + ping的原理
   + 因为hosts文件中存在所要ping的地址与网络的映射联系
   + 一般如百度这些是在外网的映射关系中
+  + 出错排除
+    + ping 192.168.xx.1，查看物理机，ping不通是虚拟机问题
+    + ping 192.168.xx.2，自己网关，虚拟机配置问题
 + 域名劫持
   + 与hosts文件有关
 
+#### 4.9.2 域名解析
 
++ DNS将域名转换为ip地址
+
++ 域名劫持
+  + ip与域名映射在`/etc/hosts`文件中
 
 ### 4.10 进程管理:bangbang:
 
@@ -925,9 +1030,11 @@ echo $HOSTNAME
 + 存在方式
   + 每个进程可以以两种方式存在：
     + 前台：用户目前的屏幕上可以进行操作的
-    + 后台：实际在操作，但由于屏幕上无法看到的进程
+    + 后台：实际在操作，但由于屏幕上无法看到的进程，在命令后添加一个`&`符号
   + 通常使用后台方式执行
   + 一般系统的服务都是以后台进程的方式存在，而且都会常驻在系统中，直到关机才结束。
++ 守护进程
+  + 
 
 #### 4.10.2 显示进程的命令
 
@@ -945,6 +1052,8 @@ ps -ef #查看中显示父进程
 pstree [选项]
 -p #显示进程的PID
 -u #显示进程的所属用户
+
+nohup ping www.baidu.com >> flog1 2>&1 &
 ```
 
 **概念**
@@ -1024,6 +1133,7 @@ systemctl enable firewalld
 yum install firewalld
 
 #检查Linux的某个端口是否在监听并可访问
+yun install telnet -y
 telnet ip号 端口号 #telnet 192.168.10.100 22
 
 #service这种关闭是临时的
@@ -1119,6 +1229,14 @@ netstat -anp | more
   + <img src="00_Linux.assets/image-20210105172907513.png" alt="image-20210105172907513" style="zoom:67%;" />
 
 ### 4.12 RPM与YUM包管理
+
+Linux安装方式：
+
++ 压缩包
+  + 知道配置文件，集群等在哪里
+  + 所以推荐
++ rpm
++ yum
 
 #### 4.12.1 RPM
 
@@ -1245,12 +1363,15 @@ io读写：iotop （没有通过yum安装）（观察大内存读写）
 
 ### 6.1 Linux配jdk
 
+解压版
+
 + 解压jdk
 
 + 配环境变量
 
   + ```bash
     vim /etc/profile
+    #/root/.bash_profile与这个不同
     ------------------------------
     #找到export
     #注释掉
@@ -1264,6 +1385,22 @@ io读写：iotop （没有通过yum安装）（观察大内存读写）
     java -version
     ```
 
+安装版
+
++ `rpm -ivh jdk-7u67-linux-x64.rpm`
+
++ ````bash
+  #查询软件
+  rpm -qa | grep jdk
+  
+  #卸载
+  rpm -e jdk-xxxx
+  ````
+
++ `vim /etc/profile`
++ ![image-20210114150053201](00_Linux.assets/image-20210114150053201.png)
++ `source /etc/profile`
+
 ### 6.2 安装vim
 
 + ```bash
@@ -1275,6 +1412,7 @@ io读写：iotop （没有通过yum安装）（观察大内存读写）
   yum -y install vim*
   #Ubuntu
   sudo apt-get install vim-gtk
+  
   ```
 
 ### 6.3 安装无法连接库
@@ -1308,7 +1446,262 @@ systemctl restart network
 #再ping
 
 #注意各虚拟机配网的一致性，除了ip
+TYPE=Ethernet
+BOOTPROTO=static
+NAME=ens33
+DEVICE=ens33
+ONBOOT=yes
+IPADDR=192.168.10.100
+NETMASK=255.255.255.0
+GATEWAY=192.168.10.2
+DNS1=114.114.114.114
+DNS2=8.8.8.8
 ```
 
+### 6.4 硬链接与软链接
 
+https://www.ibm.com/developerworks/cn/linux/l-cn-hardandsymb-links/index.html#listing2
 
+#### 6.4.1 前言
+
+1、我们知道文件，都有文件名和数据。这在Linux上被分为两部分：
+
++ 用户数据（user data）
++ 元数据（metadata）
+  + 用户数据，即文件数据块（data block），数据块是记录文件真实内容的地方
+  + 元数据，是文件的附加属性，如文件大小、创建时间、所有者等信息。
+
+2、在Linux中，元数据中的`inode`号（inode是文件元数据的一部分但其并不包含文件名，inode号即索引节点号）才==是文件的唯一标识而不是文件名==。（例如对一个文件重命名(mv)但inode号仍相同）。
+
+3、Linux中，文件名仅仅是为了方便人们的记忆和使用，系统或程序通过`inode`号寻找正确的文件数据块。如图
+
++ ![img](00_Linux.assets/image001.jpg)
+
+4、查看inode号：`stat`或`ls -i`
+
+#### 6.4.2 why
+
+为解决文件的共享使用，Linux引入了两种链接：硬链接（hard link）与软链接（又称符号链接，即soft link 或 symbolic link）。
+
++ 解决了文件的共享使用
++ 隐藏文件路径
++ 增加权限安全
++ 节省存储
+
+#### 6.4.3 硬链接
+
+**what**
+
++ 若一个inode号对应多个文件名，则称这些文件硬链接。
++ 换言之，同一个文件使用多个别名。
++ 命令
+  + `link oldfile newfile`
+  + `ln oldfile newfile`
+  + 查找：`find / -inum 1141`这里的1141不固定，是inode号
+
+**特性**
+
++ 文件有相同的inode及data block
++ 只能对已存在的文件进行创建
++ 不能交叉文件系统进行硬链接的创建
++ 不能对目录进行创建，只可对文件创建（受限于文件系统的设计）
++ 删除一个硬链接文件并不影响其他有相同inode号的文件
+
+特性展示
+
++ ```bash
+  # ls -li 
+  total 0 
+   
+  // 只能对已存在的文件创建硬连接
+  # link old.file hard.link 
+  link: cannot create link `hard.link' to `old.file': No such file or directory 
+   
+  # echo "This is an original file" > old.file 
+  # cat old.file 
+  This is an original file 
+  # stat old.file 
+   File: `old.file'
+   Size: 25           Blocks: 8          IO Block: 4096   regular file 
+  Device: 807h/2055d      Inode: 660650      Links: 2 
+  Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root) 
+  ... 
+  // 文件有相同的 inode 号以及 data block 
+  # link old.file hard.link | ls -li 
+  total 8 
+  660650 -rw-r--r-- 2 root root 25 Sep  1 17:44 hard.link 
+  660650 -rw-r--r-- 2 root root 25 Sep  1 17:44 old.file 
+   
+  // 不能交叉文件系统
+  # ln /dev/input/event5 /root/bfile.txt 
+  ln: failed to create hard link `/root/bfile.txt' => `/dev/input/event5': 
+  Invalid cross-device link 
+   
+  // 不能对目录进行创建硬连接
+  # mkdir -p old.dir/test 
+  # ln old.dir/ hardlink.dir 
+  ln: `old.dir/': hard link not allowed for directory 
+  # ls -iF 
+  660650 hard.link  657948 old.dir/  660650 old.file
+  ```
+
+#### 6.4.4 软链接
+
+what
+
++ 若文件用户数据块中存放的内容是另一个文件的路径名的指向，则该文件就是软链接。
++ 软链接本身就是一个普通文件，只是数据块内容有点特殊。
++ 本身有自己的inode号以及用户数据块。
+
+特点
+
++ 软链接有自己的文件属性及权限等
++ 可对不存在的文件或目录创建软链接
++ 软链接支持交叉文件系统
++ 软链接可对文件或目录创建
++ 创建软链接时，链接计数i_nlink不会增加
++ 删除软链接并不影响被指向的文件，但若被指向的原文件被删除，则相关软链接被称为死链接（即dangling link，若被指向路径文件被重新创建，死链接可恢复为正常的软链接）。
++ ![img](00_Linux.assets/image002.jpg)
++ 软链接创建时原文件的路径指向使用绝对路径较好，相对路径的话原文件移除后可能会成为死链接。
+
+### 6.5 快照和克隆
+
+快照
+
+克隆后（因一摸一样）
+
++ 修改`ip`
++ 修改`hostname`
+
+### 6.6 用户登录出现`-bash`
+
+原因：
+
++ 用户模板丢失或者误删除导致的
+
+解决
+
++ 用户模板文件丢失并且恢复
+
++ ```bash
+  [root@localhost ~]# rm -rf /home/yasuo/.bash*
+  [root@localhost ~]# su yasuo
+  bash-4.2$ exit
+  exit
+  [root@localhost ~]# cp /etc/skel/.bash* /home/yasuo/
+  [root@localhost ~]# chown yasuo:yasuo /home/yasuo/.bash*
+  [root@localhost ~]# su yasuo
+  [yasuo@localhost root]$ exit
+  exit
+  [root@localhost ~]# 
+  ```
+
+### 6.7 伪用户
+
+在`/etc/passwd/`文件中
+
+包含的伪用户
+
++ bin              拥有可执行的用户命令文件
+
++ sys              拥有系统文件
+
++ adm            拥有帐户文件
+
++ uucp           UUCP使用
+
++ lplp或lpd    子系统使用
+
++ nobody      NFS使用
+
+拥有帐户文件
+
+除了上面列出的伪用户外，还有许多标准的伪用户，例如：audit,cron,mail,usenet等，它们也都各自为相关的进程和文件所需要。
+
+由于Linux /etc/passwd文件是所有用户都可读的，如果用户的密码太简单或规律比较明显的话，一台普通的计算机就能够很容易地将它破解，因此对安全性要求较高的Linux系统都把加密后的口令字分离出来，单独存放在一个文件中，这个文件是/etc/shadow文件。只有超级用户才拥有该文件读权限，这就保证了用户密码的安全性。
+
+### 6.8 `2>&1`的含义
+
+#### 6.8.1 Linux中0、1、2的含义
+
+| 名称                 | 代码 | 操作符           | Java中表示                    | Linux 下文件描述符（Debian 为例)             |
+| -------------------- | ---- | ---------------- | ----------------------------- | -------------------------------------------- |
+| 标准输入(stdin)      | 0    | < 或 <<          | [System.in](http://System.in) | /dev/stdin -> /proc/self/fd/0 -> /dev/pts/0  |
+| 标准输出(stdout)     | 1    | >, >>, 1> 或 1>> | System.out                    | /dev/stdout -> /proc/self/fd/1 -> /dev/pts/0 |
+| 标准错误输出(stderr) | 2    | 2> 或 2>>        | System.err                    | /dev/stderr -> /proc/self/fd/2 -> /dev/pts/0 |
+
+从上面可以得到，
+
+平时写的`echo "hello" > t.log`
+
+也可以写成`echo "hello" 1> t.log`
+
+#### 6.8.2 关于`2>&1`的含义
+
++ 含义：将标准错误输出重定向到标准输出
++ 符号`>&`是一个整体，不可分开，分开后就不是上述含义了。
++ 不能写成`2&>1`
+
+#### 6.8.3 为什么`2>&1`要放在后面
+
+例子：`nohup java -jar app.jar >log 2>&1 &`
+
++ 最后一个`&`表示把这条命令放后台运行
+
+问题：为什么`2>&1`放在`>log`后面？？？
+
+回答：
+
++ 我们不妨把1和2都理解是一个指针，那么这么想
+  + 本来1->屏幕（1指向屏幕）
+  + 执行`>log`后，1->log（1指向log）
+  + 执行`2>&1`后，2->1（2指向1，而1指向log，因此2也指向了log）
++ 那么再分析一下`nohup java -jar app.jar 2>&1 >log &`
+  + 本来1->屏幕
+  + 执行`2>&1`后，2->1（2也指向屏幕）
+  + 执行`>log`后，1->log（这时候1指向log，2还是指向屏幕）
+
+#### 6.8.4 简写`2>&1`
+
++ `&>log`（推荐使用）
++ `>&log`
++ 即，上面的写法可以写成`nohup java -jar app.jar &>log &`
+
+### 6.9 安装mysql
+
+其三个默认库：
+
++ https://www.cnblogs.com/zhanym/p/7448307.html
+
+安装过程：
+
++ 注意版本
++ 
+
+### 6.10 信息黑洞
+
++ `ls /etc/abc >> /dev/null 2>&1`
+
+### 6.11 nohup和重定向管道
+
++ nohup可以防止进程后台运行被挂起
++ 存储日志信息：`nohup 命令 >> /filename 2>&1 &`
++ 不想要：`nohup 命令 >> /dev/null 2>&1 &`
+
+### 6.12 source
+
++ 重新加载配置文件
++ 运行shell脚本
+
+### 6.13 集群同步时间
+
+vim /home/nptdateall.sh
+
+ntpdate cn.ntp.org.cn >> /home/logs.txt
+
+*/5 * * * * /home/nptdateall.sh
+
+### 6.14 ssh操作其他虚拟机
+
++ ssh 用户@ip “cmd”
++ <img src="00_Linux.assets/image-20210116105848509.png" alt="image-20210116105848509" style="zoom:67%;" />

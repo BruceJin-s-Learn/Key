@@ -627,7 +627,7 @@ bash sum.sh
 
 + ```bash
   cut [选项参数] filename
-  #默认分隔符是制表符
+  #默认分隔符是制表符（啥也不写按照Tab制表符分隔）
   
   #参数表示怎么切
   -f #列号，提取第几列
@@ -673,7 +673,7 @@ bash sum.sh
   ifconfig eth0 | grep "inet addr" | cut -d : -f 2 | cut -d " " -f 1
   ```
 
-### 9.2 sed
+### 9.2 sed :bangbang::bangbang:
 
 #### 9.2.1 基础
 
@@ -683,13 +683,20 @@ bash sum.sh
   #选型
   -e #直接在指令列模式上进行sed的动作编辑
   #执行多个命令时用
+  -f #以选项中指定的script文件来处理输入的文本文件。
+  -n #仅显示处理后的结果
+  -i #将修改直接添加到文件中
   
   #命令
   a #新增，a的后面可以接字串，在下一行出现
-  d #删除
+d #删除
   s #查找并替换
+  
+  c #取代
+  i #插入
+  p #打印
   ```
-
+  
 + 流编辑器
 
 + 一次处理一行内容。
@@ -697,6 +704,31 @@ bash sum.sh
 + 执行后文件内容不改变。
 
 + <img src="Shell.assets/image-20210106091433872.png" alt="image-20210106091433872" style="zoom:67%;" />
+
++ 脚本之家网站可搜sed获取ip的命令行
+
++ 行选择模式
+
+  + 10 第十行
+
+  + m,n --> 第m行到第n行  [m,n]
+
+  + m,+n-->第一行到第四行 [m,m+n]
+
+  + m~n-->从m行开始，依次累加n，递增改
+
+    + ```bash
+      3~1
+      从第三行开始，每1行修改
+      3~2
+      从第三行开始，每2行修改
+      ```
+
+  + m,$ -->从m开始到最后一行
+
+  + /school/ -->匹配到school的行
+
+  + /u1/,/u4/-->从匹配u1到匹配u4
 
 #### 9.2.2 实操
 
@@ -825,7 +857,24 @@ bash sum.sh
   sort -t : -nrk 2 sort.sh
   ```
 
-  
+
+#### 9.5 wc（一般不用）
+
++ world count
+
++ 相当于 hello world
+
++ 统计单词的数量
+
++ ```bash
+  wc xxx
+  4 15 79 sxt
+  -l  line
+  -w word
+  -c  char
+  ```
+
++ 
 
 ## 10.面试题
 
@@ -859,3 +908,28 @@ sort -n test.txt | awk '{a+=$0;print $0} END{print "sum="a}'
 grep -r "shen" /home | cut -d ":" -f 1
 ```
 
+## 11.相关
+
+### 11.1 执行shell脚本方式
+
+### 11.1.1 ./xxx.sh
+
+
+
+### 11.1.2 sh xxx.sh
+
+
+
+### 11.1.3 source xxx.sh
+
++ <img src="Shell.assets/image-20210115090551811-1610672823065.png" alt="image-20210115090551811" style="zoom:80%;" />
+
+前两个是其他执行方式
+
+第二个是source执行方式
+
++ <img src="Shell.assets/image-20210115090727663.png" alt="image-20210115090727663" style="zoom:50%;" />
++ 可以看到其他执行方式是新开辟一个子进程去执行脚本文件
+  + 而source是在本进程下直接执行脚本文件
++ 局部变量source可以识别和获取，因为它直接获取
+  + 但平时用的少，所以需要export提升位全局变量，然后前两种运行

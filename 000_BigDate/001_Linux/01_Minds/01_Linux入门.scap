@@ -1,0 +1,1055 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<ScappleDocument ID="F0DA4491-8CB6-457F-A67F-03B93C515920" Version="1.1">
+   <Notes>
+      <Note Width="46.4355" FontSize="12" ID="0" Position="33.6,43.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Linux</String>
+         <ConnectedNoteIDs>1, 3-4, 48</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="1" Position="221.1,48.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>硬件知识</String>
+         <ConnectedNoteIDs>0, 2</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="2" Position="371.9,52.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>冯诺依曼体系</String>
+         <ConnectedNoteIDs>1, 8-12</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="3" Position="126.6,232.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>安装</String>
+         <ConnectedNoteIDs>0, 5-7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="4" Position="50.8,996.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>使用</String>
+         <ConnectedNoteIDs>0, 47</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="5" Position="277.3,473.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>本身</String>
+         <ConnectedNoteIDs>3, 30, 39</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="6" Position="218.8,790.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>配置环境</String>
+         <ConnectedNoteIDs>3</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="7" Position="260.2,682.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>其他软件</String>
+         <ConnectedNoteIDs>3, 37-38</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="8" Position="532.0,9.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>输入设备</String>
+         <ConnectedNoteIDs>2</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="9" Position="532.8,40.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>输出设备</String>
+         <ConnectedNoteIDs>2</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="10" Position="539.8,69.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>控制器</String>
+         <ConnectedNoteIDs>2</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="11" Position="537.5,136.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>存储器</String>
+         <ConnectedNoteIDs>2, 13-14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="12" Position="539.1,96.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>计算器</String>
+         <ConnectedNoteIDs>2</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="13" Position="637.5,116.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>内存</String>
+         <ConnectedNoteIDs>11, 21-22</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="14" Position="626.6,186.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>硬盘</String>
+         <ConnectedNoteIDs>11, 19-20</ConnectedNoteIDs>
+      </Note>
+      <Note Width="44.8242" FontSize="12" ID="15" Position="849.2,102.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>RAM</String>
+         <ConnectedNoteIDs>21</ConnectedNoteIDs>
+      </Note>
+      <Note Width="46.6064" FontSize="12" ID="16" Position="850.8,134.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>ROM</String>
+         <ConnectedNoteIDs>21</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="17" Position="850.8,234.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>机械</String>
+         <ConnectedNoteIDs>19, 25-26</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="18" Position="852.3,295.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>固态</String>
+         <ConnectedNoteIDs>19, 27-28</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="19" Position="710.9,255.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>分类</String>
+         <ConnectedNoteIDs>14, 17-18</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="20" Position="712.5,183.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>特点</String>
+         <ConnectedNoteIDs>14, 24</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="21" Position="714.1,124.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>分类</String>
+         <ConnectedNoteIDs>13, 15-16</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="22" Position="714.1,57.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>特点</String>
+         <ConnectedNoteIDs>13, 23</ConnectedNoteIDs>
+      </Note>
+      <Note Width="205.469" FontSize="12" ID="23" Position="843.8,58.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>速度快、数据量小、不安全</String>
+         <ConnectedNoteIDs>22</ConnectedNoteIDs>
+      </Note>
+      <Note Width="188.281" FontSize="12" ID="24" Position="848.4,180.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>速度慢、数据量大、安全</String>
+         <ConnectedNoteIDs>20</ConnectedNoteIDs>
+      </Note>
+      <Note Width="58.8989" FontSize="12" ID="25" Position="1068.0,206.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>扇区4K</String>
+         <ConnectedNoteIDs>17</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="26" Position="1067.2,264.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>数据读取</String>
+         <ConnectedNoteIDs>17, 29</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="27" Position="1072.7,298.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>芯片</String>
+         <ConnectedNoteIDs>18</ConnectedNoteIDs>
+      </Note>
+      <Note Width="144.592" FontSize="12" ID="28" Position="1071.9,340.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>闪存颗粒：类似U盘</String>
+         <ConnectedNoteIDs>18</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="29" Position="1218.8,264.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>顺序比随机快</String>
+         <ConnectedNoteIDs>26</ConnectedNoteIDs>
+      </Note>
+      <Note Width="46.0938" FontSize="12" ID="30" Position="381.2,380.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>网络</String>
+         <ConnectedNoteIDs>5, 33-34</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="31" Position="574.2,327.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>桥接</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="29.7852" FontSize="12" ID="32" Position="581.2,396.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>nat</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="33" Position="478.1,352.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>分类</String>
+         <ConnectedNoteIDs>30-32</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="34" Position="479.7,445.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>配置</String>
+         <ConnectedNoteIDs>30, 35</ConnectedNoteIDs>
+      </Note>
+      <Note Width="121.167" FontSize="12" ID="35" Position="562.5,465.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>域名服务器DNS</String>
+         <ConnectedNoteIDs>34, 36</ConnectedNoteIDs>
+      </Note>
+      <Note Width="226.562" FontSize="12" ID="36" Position="793.8,479.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>全球域名和ip地址的映射关系</String>
+         <ConnectedNoteIDs>35</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="37" Position="380.5,655.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>系统软件</String>
+         <ConnectedNoteIDs>7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="38" Position="379.7,726.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>应用软件</String>
+         <ConnectedNoteIDs>7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="39" Position="385.9,543.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>分支</String>
+         <ConnectedNoteIDs>5, 40-41</ConnectedNoteIDs>
+      </Note>
+      <Note Width="426.562" FontSize="12" ID="40" Position="494.5,528.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>红帽centos（2021年8不维护，2024年7不维护）</String>
+         <ConnectedNoteIDs>39</ConnectedNoteIDs>
+      </Note>
+      <Note Width="59.8511" FontSize="12" ID="41" Position="494.5,582.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Ubuntu</String>
+         <ConnectedNoteIDs>39</ConnectedNoteIDs>
+      </Note>
+      <Note Width="138.806" FontSize="12" ID="42" Position="924.2,709.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>yum install -y lrzsz</String>
+         <ConnectedNoteIDs>43-44, 48</ConnectedNoteIDs>
+      </Note>
+      <Note Width="95.5444" FontSize="12" ID="43" Position="1244.5,656.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>rz:传入Linux</String>
+         <ConnectedNoteIDs>42</ConnectedNoteIDs>
+      </Note>
+      <Note Width="109.399" FontSize="12" ID="44" Position="1236.7,716.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>sz：传出Linux</String>
+         <ConnectedNoteIDs>42</ConnectedNoteIDs>
+      </Note>
+      <Note Width="108.008" FontSize="12" ID="45" Position="1006.3,781.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>4Ark 个人博客</String>
+         <ConnectedNoteIDs>48</ConnectedNoteIDs>
+      </Note>
+      <Note Width="118.677" FontSize="12" ID="46" Position="1015.7,839.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>ctrl+l xshell清屏</String>
+         <ConnectedNoteIDs>48</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="47" Position="213.3,1221.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>常用命令</String>
+         <ConnectedNoteIDs>4</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="48" Position="138.3,909.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>了解</String>
+         <ConnectedNoteIDs>0, 42, 45-46</ConnectedNoteIDs>
+      </Note>
+      <Note Width="28.8818" FontSize="12" ID="49" Position="422.7,966.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>cat</String>
+      </Note>
+      <Note Width="65.5029" FontSize="12" ID="50" Position="433.6,999.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>mkdir -p</String>
+      </Note>
+      <Note Width="46.582" FontSize="12" ID="51" Position="430.5,1030.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>rm -rf</String>
+      </Note>
+      <Note Width="44.043" FontSize="12" ID="52" Position="514.8,1004.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>rmdir</String>
+      </Note>
+      <Note Width="44.0674" FontSize="12" ID="53" Position="479.7,967.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>more</String>
+      </Note>
+      <Note Width="29.7852" FontSize="12" ID="54" Position="543.8,966.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>top</String>
+      </Note>
+      <Note Width="27.9907" FontSize="12" ID="55" Position="604.7,967.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>tail</String>
+      </Note>
+      <Note Width="39.6118" FontSize="12" ID="56" Position="659.4,966.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>grep</String>
+      </Note>
+      <Note Width="43.1763" FontSize="12" ID="57" Position="512.5,1032.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>cp -d</String>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="58" Position="404.7,1152.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>工作中需注意</String>
+         <ConnectedNoteIDs>59-60, 63</ConnectedNoteIDs>
+      </Note>
+      <Note Width="221.094" FontSize="12" ID="59" Position="604.7,1105.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>cp file file_bak：备份再修改</String>
+         <ConnectedNoteIDs>58</ConnectedNoteIDs>
+      </Note>
+      <Note Width="212.5" FontSize="12" ID="60" Position="603.1,1148.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>创建脚本必须先touch再vim</String>
+         <ConnectedNoteIDs>58</ConnectedNoteIDs>
+      </Note>
+      <Note Width="33.3496" FontSize="12" ID="61" Position="583.6,1004.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>stat</String>
+      </Note>
+      <Note Width="46.7773" FontSize="12" ID="62" Position="643.0,1004.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>touch</String>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="63" Position="603.9,1194.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>监控</String>
+         <ConnectedNoteIDs>58, 64</ConnectedNoteIDs>
+      </Note>
+      <Note Width="64.5996" FontSize="12" ID="64" Position="739.8,1196.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>stat可以</String>
+         <ConnectedNoteIDs>63</ConnectedNoteIDs>
+      </Note>
+      <Note Width="203.906" FontSize="12" ID="65" Position="1182.0,1032.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <TextColor>1.0 0.0 0.0</TextColor>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>硬链接和软链接区别及使用</String>
+      </Note>
+      <Note Width="130.774" FontSize="12" ID="66" Position="725.0,967.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>tail -F 可实时监控</String>
+      </Note>
+      <Note Width="43.0542" FontSize="12" ID="67" Position="892.2,967.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>tail -f</String>
+      </Note>
+      <Note Width="28.8818" FontSize="12" ID="68" Position="585.9,1033.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>tac</String>
+      </Note>
+      <Note Width="89.5874" FontSize="12" ID="69" Position="719.5,1002.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>可带参数/ * </String>
+      </Note>
+      <Note Width="33.3618" FontSize="12" ID="70" Position="964.1,969.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>find</String>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="73" Position="426.6,1250.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>编辑</String>
+      </Note>
+      <Note Width="46.0938" FontSize="12" ID="74" Position="489.8,1250.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>a</String>
+      </Note>
+      <Note Width="10.9985" FontSize="12" ID="75" Position="539.1,1252.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>i</String>
+         <ConnectedNoteIDs>78</ConnectedNoteIDs>
+      </Note>
+      <Note Width="46.0938" FontSize="12" ID="76" Position="610.1,1252.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>o</String>
+      </Note>
+      <Note Width="49.9512" FontSize="12" ID="77" Position="668.8,1249.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>A末尾</String>
+      </Note>
+      <Note Width="25.3174" FontSize="12" ID="79" Position="492.2,1304.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>dd</String>
+      </Note>
+      <Note Width="16.3696" FontSize="12" ID="80" Position="594.5,1307.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>u</String>
+      </Note>
+      <Note Width="94.4824" FontSize="12" ID="81" Position="668.0,1306.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>. 能恢复删除</String>
+      </Note>
+      <Note Width="52.124" FontSize="12" ID="82" Position="536.7,1359.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>%s///g</String>
+         <ConnectedNoteIDs>83-84</ConnectedNoteIDs>
+      </Note>
+      <Note Width="96.8628" FontSize="12" ID="83" Position="630.5,1359.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>%s/need/a/g</String>
+         <ConnectedNoteIDs>82</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="84" Position="425.0,1377.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>替换</String>
+         <ConnectedNoteIDs>82</ConnectedNoteIDs>
+      </Note>
+      <Note Width="39.5996" FontSize="12" ID="85" Position="410.2,1441.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>df -h</String>
+      </Note>
+      <Note Width="148.047" FontSize="12" ID="86" Position="1182.8,1070.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <TextColor>1.0 0.0 0.0</TextColor>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>多练文件操作的命令</String>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="87" Position="114.8,1587.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>加密算法</String>
+         <ConnectedNoteIDs>88-90</ConnectedNoteIDs>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="88" Position="253.9,1528.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>不可逆加密</String>
+         <ConnectedNoteIDs>87</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="89" Position="254.7,1582.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>对称加密</String>
+         <ConnectedNoteIDs>87</ConnectedNoteIDs>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="90" Position="253.1,1638.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>不对称加密</String>
+         <ConnectedNoteIDs>87</ConnectedNoteIDs>
+      </Note>
+      <Note Width="42.1509" FontSize="12" ID="91" Position="410.2,1641.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>RSA</String>
+      </Note>
+      <Note Width="42.4927" FontSize="12" ID="92" Position="412.5,1532.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>MD5</String>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="93" Position="108.6,1748.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>免密操作</String>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="94" Position="263.3,1715.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>集群需要</String>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="95" Position="262.5,1748.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>生成公钥私钥</String>
+      </Note>
+      <Note Width="110.608" FontSize="12" ID="96" Position="268.0,1788.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>主机间ssh!!!!!!!</String>
+      </Note>
+      <Note Width="203.906" FontSize="12" ID="97" Position="255.5,1844.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>时间和日期！！！！！！！</String>
+         <ConnectedNoteIDs>98-100</ConnectedNoteIDs>
+      </Note>
+      <Note Width="243.75" FontSize="12" ID="98" Position="546.9,1846.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>集群时间需同步，hbase</String>
+         <ConnectedNoteIDs>97</ConnectedNoteIDs>
+      </Note>
+      <Note Width="41.2476" FontSize="12" ID="99" Position="493.8,1905.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>CTS</String>
+         <ConnectedNoteIDs>97</ConnectedNoteIDs>
+      </Note>
+      <Note Width="96.814" FontSize="12" ID="100" Position="472.7,1948.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>建议 ntpdata</String>
+         <ConnectedNoteIDs>97</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="101" Position="473.4,1984.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>时间戳</String>
+      </Note>
+      <Note Width="207.031" FontSize="12" ID="102" Position="473.4,2017.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>可以改成与本地时间对应</String>
+      </Note>
+      <Note Width="46.4355" FontSize="12" ID="103" Position="878.9,1577.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Linux</String>
+         <ConnectedNoteIDs>104</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="104" Position="1096.1,1529.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>文件系统</String>
+         <ConnectedNoteIDs>103</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="105" Position="182.8,2138.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>用户相关</String>
+         <ConnectedNoteIDs>106-109</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="106" Position="337.5,2080.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>新建</String>
+         <ConnectedNoteIDs>105</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="107" Position="337.5,2116.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>密码</String>
+         <ConnectedNoteIDs>105</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="108" Position="338.3,2148.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>删除</String>
+         <ConnectedNoteIDs>105</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="109" Position="335.9,2179.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>修改</String>
+         <ConnectedNoteIDs>105</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="110" Position="188.3,2280.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>管道</String>
+         <ConnectedNoteIDs>111-112</ConnectedNoteIDs>
+      </Note>
+      <Note Width="11.5967" FontSize="12" ID="111" Position="298.4,2240.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>|</String>
+         <ConnectedNoteIDs>110</ConnectedNoteIDs>
+      </Note>
+      <Note Width="189.062" FontSize="12" ID="112" Position="295.3,2272.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>grep 强大的文本搜索命令</String>
+         <ConnectedNoteIDs>110</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="113" Position="175.8,2356.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>重定向</String>
+         <ConnectedNoteIDs>114-115</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="114" Position="303.1,2370.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>信息黑洞</String>
+         <ConnectedNoteIDs>113, 120</ConnectedNoteIDs>
+      </Note>
+      <Note Width="351.562" FontSize="12" ID="115" Position="302.3,2324.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>ls /1 >> xxx  标准输出（/1、0），2是错误输出</String>
+         <ConnectedNoteIDs>113, 116-117</ConnectedNoteIDs>
+      </Note>
+      <Note Width="260.938" FontSize="12" ID="116" Position="720.3,2312.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>ping sdfs 2> /root/qqqq</String>
+         <ConnectedNoteIDs>115</ConnectedNoteIDs>
+      </Note>
+      <Note Width="283.594" FontSize="12" ID="117" Position="717.2,2352.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <Formatting>
+            <FormatRange Link="www.baidu.com" Underline="Yes">5,13</FormatRange>
+         </Formatting>
+         <String>ping www.baidu.com 1> /root/qqqq &amp;</String>
+         <ConnectedNoteIDs>115, 119</ConnectedNoteIDs>
+      </Note>
+      <Note Width="283.594" FontSize="12" ID="118" Position="718.3,1751.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <Formatting>
+            <FormatRange Link="www.baidu.com" Underline="Yes">5,13</FormatRange>
+         </Formatting>
+         <String>ping www.baidu.com 1> /root/qqqq</String>
+      </Note>
+      <Note Width="143.152" FontSize="12" ID="119" Position="1066.4,2349.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>&amp;符号表示后台运行</String>
+         <ConnectedNoteIDs>117</ConnectedNoteIDs>
+      </Note>
+      <Note Width="239.844" FontSize="12" ID="120" Position="421.9,2373.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>ls /etc/abc >> /dev/null 2>&amp;1</String>
+         <ConnectedNoteIDs>114</ConnectedNoteIDs>
+      </Note>
+      <Note Width="80.6885" FontSize="12" ID="121" Position="193.8,2444.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>安装mysql</String>
+      </Note>
+      <Note Width="80.6885" FontSize="12" ID="122" Position="310.9,2422.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>安装mysql</String>
+      </Note>
+      <Note Width="87.3901" FontSize="12" ID="123" Position="190.6,2559.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>shell四剑客</String>
+         <ConnectedNoteIDs>124</ConnectedNoteIDs>
+      </Note>
+      <Note Width="28.8818" FontSize="12" ID="124" Position="373.4,2502.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>cut</String>
+         <ConnectedNoteIDs>123</ConnectedNoteIDs>
+      </Note>
+      <Note Width="21.7163" FontSize="12" ID="125" Position="459.4,2463.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>-d</String>
+      </Note>
+      <Note Width="18.0176" FontSize="12" ID="126" Position="461.7,2491.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>-f</String>
+      </Note>
+      <Note Width="235.156" FontSize="12" ID="127" Position="196.1,2614.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>权限！！！！！！！！！！</String>
+         <ConnectedNoteIDs>128-129</ConnectedNoteIDs>
+      </Note>
+      <Note Width="53.9307" FontSize="12" ID="128" Position="478.9,2598.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>chown</String>
+         <ConnectedNoteIDs>127</ConnectedNoteIDs>
+      </Note>
+      <Note Width="55.7129" FontSize="12" ID="129" Position="481.2,2640.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>chmod</String>
+         <ConnectedNoteIDs>127</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="130" Position="190.6,2701.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>定时调度</String>
+      </Note>
+   </Notes>
+   <BackgroundShapes>
+      <Shape Width="602.344" Faded="No" Height="100" Sticky="Yes" ID="71" Position="410.9,967.2" Shadow="No">
+         <Appearance>
+            <Border Weight="1" Style="Rounded"/>
+         </Appearance>
+      </Shape>
+      <Shape Width="592.187" Faded="No" Height="139.844" Sticky="Yes" ID="72" Position="402.3,1092.2" Shadow="No">
+         <Appearance>
+            <Border Weight="1" Style="Rounded"/>
+         </Appearance>
+      </Shape>
+      <Shape Width="601.562" Faded="No" Height="167.578" Sticky="No" ID="78" Position="407.0,1244.1" Shadow="No">
+         <Appearance>
+            <Border Weight="1" Style="Rounded"/>
+         </Appearance>
+         <ConnectedNoteIDs>75</ConnectedNoteIDs>
+      </Shape>
+   </BackgroundShapes>
+   <NoteStyles>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Engineering Corps" ID="B8B2D438-9774-41D4-A9BC-CD9B67CFEA4B" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.769436 0.762219 0.390143</BorderColor>
+         <FillColor>0.912963 0.894118 0.644541</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Fleet Transport" ID="F1FC305C-052B-4F3F-BB8C-25DADDCC0A26" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.485893 0.568933 0.756207</BorderColor>
+         <FillColor>0.844068 0.869596 0.923064</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Fleet Destroyers" ID="B9EF92EB-4030-4193-B10E-ABBF838D51B9" AffectTextColor="Yes" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <TextColor>1.0 0.0 0.0</TextColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Counter-Intelligence" ID="BC19CAE4-7152-4721-9CF4-A4CCD50E3700" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.690303 0.407263 0.550912</BorderColor>
+         <FillColor>0.898329 0.817472 0.865339</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Mobile Infantry" ID="A708BF64-2D8D-4A31-811E-106607C2DC7B" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.269490 0.164034 0.186694</BorderColor>
+         <FillColor>0.934157 0.888319 0.785290</FillColor>
+      </Style>
+      <Style AffectFontStyle="Yes" AffectAlignment="Yes" Name="Military Intelligence" ID="529063C6-9654-4CB2-A6EB-2BCE352C804C" AffectTextColor="No" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <IsBold>Yes</IsBold>
+         <FontSize>12.0</FontSize>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Advance Scout" ID="9E444576-A25A-4491-B7DD-03B20AB5AD1A" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.399100 0.583322 0.354864</BorderColor>
+         <FillColor>0.808835 0.872419 0.801343</FillColor>
+      </Style>
+   </NoteStyles>
+   <UISettings>
+      <BackgroundColor>1.0 0.988006 0.945006</BackgroundColor>
+      <DefaultFont>Helvetica</DefaultFont>
+      <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+   </UISettings>
+   <PrintSettings VerticalPagination="Auto" HorizontalPagination="Clip" Orientation="Portrait" RightMargin="12.000000" BottomMargin="12.000000" HorizontallyCentered="Yes" ScaleFactor="1.000000" PagesAcross="1" PaperType="iso-a4" PagesDown="1" TopMargin="12.000000" Collates="Yes" PaperSize="-1.000000,-1.000000" LeftMargin="12.000000" VerticallyCentered="Yes"/>
+</ScappleDocument>

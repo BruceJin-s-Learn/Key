@@ -1,0 +1,696 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<ScappleDocument ID="B995CFC8-2258-4B1B-8F3E-ED66B44AA433" Version="1.1">
+   <Notes>
+      <Note Width="49.1089" FontSize="12" ID="0" Position="5.5,757.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Nginx</String>
+         <ConnectedNoteIDs>2, 6, 19, 34, 52, 61, 67</ConnectedNoteIDs>
+      </Note>
+      <Note Width="260.156" FontSize="12" ID="1" Position="659.4,82.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>轻量级web服务器，反向代理服务器</String>
+         <ConnectedNoteIDs>2</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="2" Position="462.5,177.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>是什么</String>
+         <ConnectedNoteIDs>0-1</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="3" Position="1403.9,23.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>存储</String>
+         <ConnectedNoteIDs>5</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="4" Position="1403.9,69.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>运算</String>
+         <ConnectedNoteIDs>5</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="5" Position="1295.3,47.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>大数据</String>
+         <ConnectedNoteIDs>3-4</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="6" Position="487.5,272.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>前言</String>
+         <ConnectedNoteIDs>0, 7, 10-11</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="7" Position="636.7,184.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>高并发</String>
+         <ConnectedNoteIDs>6, 9</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="8" Position="905.5,180.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>负载均衡</String>
+         <ConnectedNoteIDs>9</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="9" Position="777.3,180.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>解决</String>
+         <ConnectedNoteIDs>7-8</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="10" Position="647.7,227.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>正向代理</String>
+         <ConnectedNoteIDs>6, 12</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="11" Position="649.2,273.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>反向代理</String>
+         <ConnectedNoteIDs>6, 12</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="12" Position="797.7,256.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>相亲</String>
+         <ConnectedNoteIDs>10-11, 13-14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="13" Position="916.4,231.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>王妈妈</String>
+         <ConnectedNoteIDs>12, 18</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="14" Position="925.0,287.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>机构</String>
+         <ConnectedNoteIDs>12, 15-17</ConnectedNoteIDs>
+      </Note>
+      <Note Width="23.5107" FontSize="12" ID="15" Position="1036.7,242.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>xx</String>
+         <ConnectedNoteIDs>14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="31.5552" FontSize="12" ID="16" Position="1033.6,278.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>xxx</String>
+         <ConnectedNoteIDs>14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="39.5996" FontSize="12" ID="17" Position="1025.8,319.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>xxxx</String>
+         <ConnectedNoteIDs>14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="18" Position="1019.5,211.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>金莲</String>
+         <ConnectedNoteIDs>13</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="19" Position="457.8,462.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>安装</String>
+         <ConnectedNoteIDs>0, 20, 22</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="20" Position="611.7,438.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>源码需要编译</String>
+         <ConnectedNoteIDs>19, 21, 28-29</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="21" Position="778.9,389.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>安装依赖</String>
+         <ConnectedNoteIDs>20, 27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="22" Position="653.9,341.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>解压</String>
+         <ConnectedNoteIDs>19</ConnectedNoteIDs>
+      </Note>
+      <Note Width="32.4585" FontSize="12" ID="23" Position="1024.2,347.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>gcc</String>
+         <ConnectedNoteIDs>27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="82.5195" FontSize="12" ID="24" Position="1028.9,376.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>pcre-devel</String>
+         <ConnectedNoteIDs>27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="91.0034" FontSize="12" ID="25" Position="1029.7,400.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>zlib-devel</String>
+         <ConnectedNoteIDs>27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="106.689" FontSize="12" ID="26" Position="1030.5,436.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>openssl-devel</String>
+         <ConnectedNoteIDs>27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.282" FontSize="12" ID="27" Position="880.5,394.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>yum install -y</String>
+         <ConnectedNoteIDs>21, 23-26</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="28" Position="785.2,437.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>配置安装路径</String>
+         <ConnectedNoteIDs>20</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="29" Position="786.7,479.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>开始安装编译</String>
+         <ConnectedNoteIDs>20</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="30" Position="695.3,546.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>开启</String>
+         <ConnectedNoteIDs>31-32, 34</ConnectedNoteIDs>
+      </Note>
+      <Note Width="246.094" FontSize="12" ID="31" Position="912.5,571.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>默认是80，nginx默认端口也是80</String>
+         <ConnectedNoteIDs>30</ConnectedNoteIDs>
+      </Note>
+      <Note Width="104.431" FontSize="12" ID="32" Position="900.8,525.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>sbin下 ./nginx</String>
+         <ConnectedNoteIDs>30</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="33" Position="683.6,649.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>关闭服务</String>
+         <ConnectedNoteIDs>34-39</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="34" Position="453.9,768.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>使用</String>
+         <ConnectedNoteIDs>0, 30, 33, 40-41, 43, 46</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="35" Position="872.7,611.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>杀死进程</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="52.1362" FontSize="12" ID="36" Position="875.0,674.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>reload</String>
+         <ConnectedNoteIDs>33, 54</ConnectedNoteIDs>
+      </Note>
+      <Note Width="57.5073" FontSize="12" ID="37" Position="861.7,702.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>reopen</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="46.0938" FontSize="12" ID="38" Position="861.3,741.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>stop</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="33.3618" FontSize="12" ID="39" Position="882.8,648.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>quit</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="40" Position="689.8,777.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>平滑重启</String>
+         <ConnectedNoteIDs>34</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="41" Position="685.2,729.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>启动服务</String>
+         <ConnectedNoteIDs>34</ConnectedNoteIDs>
+      </Note>
+      <Note Width="139.636" FontSize="12" ID="43" Position="688.3,844.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>配置环境后
+直接nginx启动服务</String>
+         <ConnectedNoteIDs>34, 55</ConnectedNoteIDs>
+      </Note>
+      <Note Width="81.543" FontSize="12" ID="44" Position="868.8,902.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>nginx.conf</String>
+         <ConnectedNoteIDs>46, 48-51</ConnectedNoteIDs>
+      </Note>
+      <Note Width="36.9385" FontSize="12" ID="45" Position="890.6,960.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>logs</String>
+         <ConnectedNoteIDs>46</ConnectedNoteIDs>
+      </Note>
+      <Note Width="108.386" FontSize="12" ID="46" Position="693.8,931.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>nginx重要目录</String>
+         <ConnectedNoteIDs>34, 44-45, 47, 78</ConnectedNoteIDs>
+      </Note>
+      <Note Width="36.9385" FontSize="12" ID="47" Position="897.7,1012.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>sbin</String>
+         <ConnectedNoteIDs>46</ConnectedNoteIDs>
+      </Note>
+      <Note Width="285.938" FontSize="12" ID="48" Position="1155.5,917.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>#注释是要使用默认值，不写也是默认值</String>
+         <ConnectedNoteIDs>44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="49" Position="1163.3,881.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>配置文件</String>
+         <ConnectedNoteIDs>44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="232.031" FontSize="12" ID="50" Position="1154.7,956.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>日志写入格式 main（默认）</String>
+         <ConnectedNoteIDs>44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="214.844" FontSize="12" ID="51" Position="1147.7,1009.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>server中写要监听的地址</String>
+         <ConnectedNoteIDs>44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="52" Position="382.8,1119.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>负载均衡</String>
+         <ConnectedNoteIDs>0, 42, 53</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="53" Position="550.0,1039.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>集群</String>
+         <ConnectedNoteIDs>52</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="54" Position="1007.8,672.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>重载</String>
+         <ConnectedNoteIDs>36</ConnectedNoteIDs>
+      </Note>
+      <Note Width="519.531" ID="55" Position="903.3,789.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+         </Appearance>
+         <ImageData Type="png" Name="">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</ImageData>
+         <ConnectedNoteIDs>43</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="42" Position="538.3,1149.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>负载策略</String>
+         <ConnectedNoteIDs>52, 56-59</ConnectedNoteIDs>
+      </Note>
+      <Note Width="132.422" FontSize="12" ID="56" Position="707.9,1084.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>请求轮询（默认）</String>
+         <ConnectedNoteIDs>42</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="57" Position="714.1,1126.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>增加权重</String>
+         <ConnectedNoteIDs>42</ConnectedNoteIDs>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="58" Position="708.6,1162.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>最少连接数</String>
+         <ConnectedNoteIDs>42, 60</ConnectedNoteIDs>
+      </Note>
+      <Note Width="59.4971" FontSize="12" ID="59" Position="700.0,1201.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>IpHash</String>
+         <ConnectedNoteIDs>42, 60</ConnectedNoteIDs>
+      </Note>
+      <Note Width="170.312" FontSize="12" ID="60" Position="875.8,1201.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>都写有个报错？？？？</String>
+         <ConnectedNoteIDs>58-59</ConnectedNoteIDs>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="61" Position="371.9,1266.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>资源静态化</String>
+         <ConnectedNoteIDs>0, 62, 64</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="62" Position="542.2,1233.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>图床</String>
+         <ConnectedNoteIDs>61, 63, 65</ConnectedNoteIDs>
+      </Note>
+      <Note Width="131.677" FontSize="12" ID="63" Position="693.0,1244.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <Formatting>
+            <FormatRange Link="https://imgurl.org/" Underline="Yes">0,19</FormatRange>
+         </Formatting>
+         <String>https://imgurl.org/</String>
+         <ConnectedNoteIDs>62</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.995" FontSize="12" ID="64" Position="545.3,1364.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>路径路由规则（8个）</String>
+         <ConnectedNoteIDs>61</ConnectedNoteIDs>
+      </Note>
+      <Note Width="350.781" FontSize="12" ID="65" Position="641.4,1312.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>修改tomcat的img是指向的nginx的static目录下的</String>
+         <ConnectedNoteIDs>62</ConnectedNoteIDs>
+      </Note>
+      <Note Width="63.7085" FontSize="12" ID="66" Position="1286.7,1239.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>ssh免密</String>
+      </Note>
+      <Note Width="108.85" FontSize="12" ID="67" Position="310.9,1545.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>session一致性</String>
+         <ConnectedNoteIDs>0, 79</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="68" Position="634.4,1426.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>端口号</String>
+         <ConnectedNoteIDs>70</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="69" Position="642.2,1479.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>域名</String>
+         <ConnectedNoteIDs>70</ConnectedNoteIDs>
+      </Note>
+      <Note Width="182.031" FontSize="12" ID="70" Position="710.9,1455.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>单台Linux搭建多tomcat</String>
+         <ConnectedNoteIDs>68-69, 71, 73, 77</ConnectedNoteIDs>
+      </Note>
+      <Note Width="86.9507" FontSize="12" ID="71" Position="917.2,1408.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>停止tomcat</String>
+         <ConnectedNoteIDs>70, 72</ConnectedNoteIDs>
+      </Note>
+      <Note Width="223.438" FontSize="12" ID="72" Position="1065.6,1406.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>./apachexxx/bin/shutdown.sh</String>
+         <ConnectedNoteIDs>71</ConnectedNoteIDs>
+      </Note>
+      <Note Width="89.85" FontSize="12" ID="73" Position="919.5,1444.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>复制tomcat</String>
+         <ConnectedNoteIDs>70, 74-76</ConnectedNoteIDs>
+      </Note>
+      <Note Width="320.312" FontSize="12" ID="74" Position="1065.6,1444.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>cp -r apache-tomxxx ./apache-tomcat-8080</String>
+         <ConnectedNoteIDs>73</ConnectedNoteIDs>
+      </Note>
+      <Note Width="300.781" FontSize="12" ID="75" Position="1065.6,1480.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>vim apache-tomxxx/conf/server.xml</String>
+         <ConnectedNoteIDs>73</ConnectedNoteIDs>
+      </Note>
+      <Note Width="254.688" FontSize="12" ID="76" Position="1071.8,1509.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>vim apachxxx/bin/catalina.sh</String>
+         <ConnectedNoteIDs>73</ConnectedNoteIDs>
+      </Note>
+      <Note Width="91.4185" FontSize="12" ID="77" Position="904.7,1544.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>启动tomcat </String>
+         <ConnectedNoteIDs>70</ConnectedNoteIDs>
+      </Note>
+      <Note Width="37.8174" FontSize="12" ID="78" Position="899.2,1062.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>html</String>
+         <ConnectedNoteIDs>46</ConnectedNoteIDs>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="79" Position="475.0,1540.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>内存数据库</String>
+         <ConnectedNoteIDs>67, 80</ConnectedNoteIDs>
+      </Note>
+      <Note Width="235.938" FontSize="12" ID="80" Position="614.8,1541.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>tomcat找到设置对应session信息</String>
+         <ConnectedNoteIDs>79</ConnectedNoteIDs>
+      </Note>
+   </Notes>
+   <BackgroundShapes/>
+   <NoteStyles>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Engineering Corps" ID="B8B2D438-9774-41D4-A9BC-CD9B67CFEA4B" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.769436 0.762219 0.390143</BorderColor>
+         <FillColor>0.912963 0.894118 0.644541</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Fleet Transport" ID="F1FC305C-052B-4F3F-BB8C-25DADDCC0A26" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.485893 0.568933 0.756207</BorderColor>
+         <FillColor>0.844068 0.869596 0.923064</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Fleet Destroyers" ID="B9EF92EB-4030-4193-B10E-ABBF838D51B9" AffectTextColor="Yes" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <TextColor>1.0 0.0 0.0</TextColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Counter-Intelligence" ID="BC19CAE4-7152-4721-9CF4-A4CCD50E3700" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.690303 0.407263 0.550912</BorderColor>
+         <FillColor>0.898329 0.817472 0.865339</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Mobile Infantry" ID="A708BF64-2D8D-4A31-811E-106607C2DC7B" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.269490 0.164034 0.186694</BorderColor>
+         <FillColor>0.934157 0.888319 0.785290</FillColor>
+      </Style>
+      <Style AffectFontStyle="Yes" AffectAlignment="Yes" Name="Military Intelligence" ID="529063C6-9654-4CB2-A6EB-2BCE352C804C" AffectTextColor="No" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <IsBold>Yes</IsBold>
+         <FontSize>12.0</FontSize>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Advance Scout" ID="9E444576-A25A-4491-B7DD-03B20AB5AD1A" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.399100 0.583322 0.354864</BorderColor>
+         <FillColor>0.808835 0.872419 0.801343</FillColor>
+      </Style>
+   </NoteStyles>
+   <UISettings>
+      <BackgroundColor>1.0 0.988006 0.945006</BackgroundColor>
+      <DefaultFont>Helvetica</DefaultFont>
+      <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+   </UISettings>
+   <PrintSettings VerticalPagination="Auto" HorizontalPagination="Clip" Orientation="Portrait" RightMargin="12.000000" BottomMargin="12.000000" HorizontallyCentered="Yes" ScaleFactor="1.000000" PagesAcross="1" PaperType="iso-a4" PagesDown="1" TopMargin="12.000000" Collates="Yes" PaperSize="-1.000000,-1.000000" LeftMargin="12.000000" VerticallyCentered="Yes"/>
+</ScappleDocument>
