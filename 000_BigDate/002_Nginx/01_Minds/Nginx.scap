@@ -7,7 +7,7 @@
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
          <String>Nginx</String>
-         <ConnectedNoteIDs>2, 6, 19, 34, 52, 61, 67</ConnectedNoteIDs>
+         <ConnectedNoteIDs>2, 6, 19, 34, 52, 61, 67, 81</ConnectedNoteIDs>
       </Note>
       <Note Width="260.156" FontSize="12" ID="1" Position="659.4,82.0">
          <Appearance>
@@ -539,7 +539,7 @@
          </Appearance>
          <String>ssh免密</String>
       </Note>
-      <Note Width="108.85" FontSize="12" ID="67" Position="310.9,1545.8">
+      <Note Width="108.85" FontSize="12" ID="67" Position="404.6,1512.2">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
@@ -635,7 +635,7 @@
          <String>html</String>
          <ConnectedNoteIDs>46</ConnectedNoteIDs>
       </Note>
-      <Note Width="85.5469" FontSize="12" ID="79" Position="475.0,1540.2">
+      <Note Width="85.5469" FontSize="12" ID="79" Position="602.3,1541.8">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
@@ -643,13 +643,21 @@
          <String>内存数据库</String>
          <ConnectedNoteIDs>67, 80</ConnectedNoteIDs>
       </Note>
-      <Note Width="235.938" FontSize="12" ID="80" Position="614.8,1541.0">
+      <Note Width="235.938" FontSize="12" ID="80" Position="731.2,1583.2">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
          <String>tomcat找到设置对应session信息</String>
          <ConnectedNoteIDs>79</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="81" Position="353.9,1694.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>日志收集</String>
+         <ConnectedNoteIDs>0</ConnectedNoteIDs>
       </Note>
    </Notes>
    <BackgroundShapes/>

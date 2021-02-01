@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<ScappleDocument ID="4E04DBC4-C7DC-4281-8927-DDFA0F2B1B6F" Version="1.1">
+   <Notes>
+      <Note Width="40.1611" FontSize="12" ID="0" Position="107.8,249.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Hive</String>
+         <ConnectedNoteIDs>1, 5-7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="1" Position="278.1,100.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>数据仓库工具</String>
+         <ConnectedNoteIDs>0, 3</ConnectedNoteIDs>
+      </Note>
+      <Note Width="92.3584" FontSize="12" ID="3" Position="435.9,94.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>基于hadoop</String>
+         <ConnectedNoteIDs>1, 4</ConnectedNoteIDs>
+      </Note>
+      <Note Width="272.656" FontSize="12" ID="4" Position="593.0,94.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>将结构化数据映射成一个数据库的表</String>
+         <ConnectedNoteIDs>3</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="5" Position="332.8,136.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>关系</String>
+         <ConnectedNoteIDs>0</ConnectedNoteIDs>
+      </Note>
+      <Note Width="116.797" FontSize="12" ID="6" Position="333.6,168.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>对比传统数据库</String>
+         <ConnectedNoteIDs>0</ConnectedNoteIDs>
+      </Note>
+      <Note Width="75.2441" FontSize="12" ID="7" Position="250.0,592.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>hive SQL</String>
+         <ConnectedNoteIDs>0, 2, 8-9, 16, 18, 20-22, 29, 51, 57</ConnectedNoteIDs>
+      </Note>
+      <Note Width="96.3135" FontSize="12" ID="8" Position="495.3,223.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>与mysql类似</String>
+         <ConnectedNoteIDs>7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="9" Position="520.3,307.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>学习</String>
+         <ConnectedNoteIDs>7, 10-13</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="10" Position="660.9,240.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>数据类型</String>
+         <ConnectedNoteIDs>9, 14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="184.375" FontSize="12" ID="11" Position="649.2,284.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>select * from tablename</String>
+         <ConnectedNoteIDs>9, 14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="167.969" FontSize="12" ID="12" Position="642.2,317.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>常用函数（内置函数）</String>
+         <ConnectedNoteIDs>9, 14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="13" Position="643.8,349.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>表联接</String>
+         <ConnectedNoteIDs>9, 14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="14" Position="1003.1,304.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>练习</String>
+         <ConnectedNoteIDs>10-13, 15</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="15" Position="1130.5,305.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>脚本</String>
+         <ConnectedNoteIDs>14</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="16" Position="509.4,431.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>基本操作</String>
+         <ConnectedNoteIDs>7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="2" Position="507.8,630.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>查询语法</String>
+         <ConnectedNoteIDs>7, 17</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="17" Position="646.9,644.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>排序</String>
+         <ConnectedNoteIDs>2</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="18" Position="513.3,767.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>内置函数</String>
+         <ConnectedNoteIDs>7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="20" Position="512.5,869.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>窗口函数</String>
+         <ConnectedNoteIDs>7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="21" Position="503.9,971.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>自定义函数</String>
+         <ConnectedNoteIDs>7</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="22" Position="553.9,1428.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>参数</String>
+         <ConnectedNoteIDs>7, 26</ConnectedNoteIDs>
+      </Note>
+      <Note Width="719.531" FontSize="12" ID="23" Position="868.0,1281.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>beeline -u jdbc:hive2://bdp103:10000 -n root -hiveconf mapred.reduce.tasks=10;  临时，生命周期短</String>
+         <ConnectedNoteIDs>19</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="19" Position="747.7,1282.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>命令行</String>
+         <ConnectedNoteIDs>23, 26</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="24" Position="746.9,1344.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>参数声明</String>
+         <ConnectedNoteIDs>26, 28</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="25" Position="743.8,1208.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>配置文件</String>
+         <ConnectedNoteIDs>26-27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="26" Position="642.2,1283.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>设置方式</String>
+         <ConnectedNoteIDs>19, 22, 24-25</ConnectedNoteIDs>
+      </Note>
+      <Note Width="120.081" FontSize="12" ID="27" Position="872.7,1205.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>hive-default.xml</String>
+         <ConnectedNoteIDs>25</ConnectedNoteIDs>
+      </Note>
+      <Note Width="306.25" FontSize="12" ID="28" Position="868.8,1344.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>set mapred.reduce.tasks=3;  仅本次有效</String>
+         <ConnectedNoteIDs>24</ConnectedNoteIDs>
+      </Note>
+      <Note Width="74.6094" FontSize="12" ID="29" Position="504.7,1581.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <TextColor>1.0 0.0 0.0</TextColor>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>数据倾斜</String>
+         <ConnectedNoteIDs>7, 36-37, 49</ConnectedNoteIDs>
+      </Note>
+      <Note Width="94.9585" FontSize="12" ID="30" Position="860.2,1522.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>key分布不均</String>
+         <ConnectedNoteIDs>31, 36-37</ConnectedNoteIDs>
+      </Note>
+      <Note Width="126.208" FontSize="12" ID="31" Position="1114.1,1497.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>把key打乱，分解</String>
+         <ConnectedNoteIDs>30</ConnectedNoteIDs>
+      </Note>
+      <Note Width="192.188" FontSize="12" ID="32" Position="850.0,1432.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>不可分割的大文件（少）</String>
+         <ConnectedNoteIDs>36</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="33" Position="1068.0,1736.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>解决</String>
+         <ConnectedNoteIDs>34-35, 39</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="34" Position="1220.3,1707.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>拆分</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="428.906" FontSize="12" ID="35" Position="1213.3,1752.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>设置参数hive. new job. grouping set. cardinaliy，其默认30</String>
+         <ConnectedNoteIDs>33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="36" Position="725.0,1490.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>原因</String>
+         <ConnectedNoteIDs>29-30, 32</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="37" Position="699.2,1738.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>情况</String>
+         <ConnectedNoteIDs>29-30, 38-40, 43</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="38" Position="859.4,1690.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>业务无关数据</String>
+         <ConnectedNoteIDs>37, 41</ConnectedNoteIDs>
+      </Note>
+      <Note Width="132.422" FontSize="12" ID="39" Position="860.2,1737.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>多维聚合数据膨胀</String>
+         <ConnectedNoteIDs>33, 37</ConnectedNoteIDs>
+      </Note>
+      <Note Width="201.562" FontSize="12" ID="40" Position="848.4,1791.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>无法削减中间结果的数据量</String>
+         <ConnectedNoteIDs>37, 44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="41" Position="1028.9,1687.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>解决</String>
+         <ConnectedNoteIDs>38, 42</ConnectedNoteIDs>
+      </Note>
+      <Note Width="148.047" FontSize="12" ID="42" Position="1184.4,1655.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>异常处理（过滤掉）</String>
+         <ConnectedNoteIDs>41</ConnectedNoteIDs>
+      </Note>
+      <Note Width="115.063" FontSize="12" ID="43" Position="846.1,1852.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>两个hive表连接</String>
+         <ConnectedNoteIDs>37, 47</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="44" Position="1088.3,1798.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>解决</String>
+         <ConnectedNoteIDs>40, 45-46</ConnectedNoteIDs>
+      </Note>
+      <Note Width="171.875" FontSize="12" ID="45" Position="1214.8,1790.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>提升map或reduce内存</String>
+         <ConnectedNoteIDs>44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="220.312" FontSize="12" ID="46" Position="1218.8,1824.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>hiveserver2的jawa(Xmx)</String>
+         <ConnectedNoteIDs>44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="47" Position="1071.1,1855.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>解决</String>
+         <ConnectedNoteIDs>43, 48</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="48" Position="1207.8,1859.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>启用两个作业</String>
+         <ConnectedNoteIDs>47</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="49" Position="721.9,1580.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>表现形式</String>
+         <ConnectedNoteIDs>29, 50</ConnectedNoteIDs>
+      </Note>
+      <Note Width="632.812" FontSize="12" ID="50" Position="956.2,1584.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>所有map或者reduce都执行完，看最后一个执行很长时间，或者出现内存溢出异常</String>
+         <ConnectedNoteIDs>49</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="51" Position="499.2,1972.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>企业优化</String>
+         <ConnectedNoteIDs>7, 52, 54</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="52" Position="713.3,1909.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>核心思想</String>
+         <ConnectedNoteIDs>51, 53</ConnectedNoteIDs>
+      </Note>
+      <Note Width="246.094" FontSize="12" ID="53" Position="853.1,1909.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>把hiveSQL当作mr程序去优化</String>
+         <ConnectedNoteIDs>52</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="54" Position="705.5,2005.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>防止笛卡尔积</String>
+         <ConnectedNoteIDs>51, 55-56</ConnectedNoteIDs>
+      </Note>
+      <Note Width="54.2969" FontSize="12" ID="55" Position="892.2,2003.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>列裁剪</String>
+         <ConnectedNoteIDs>54</ConnectedNoteIDs>
+      </Note>
+      <Note Width="98.6084" FontSize="12" ID="56" Position="893.8,2057.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>多用union all</String>
+         <ConnectedNoteIDs>54</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="57" Position="455.5,2180.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>存储格式</String>
+         <ConnectedNoteIDs>7, 58</ConnectedNoteIDs>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="58" Position="642.2,2140.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>方式</String>
+         <ConnectedNoteIDs>57, 59-60</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="59" Position="730.5,2110.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>行式存储</String>
+         <ConnectedNoteIDs>58</ConnectedNoteIDs>
+      </Note>
+      <Note Width="69.9219" FontSize="12" ID="60" Position="732.0,2164.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>列式存储</String>
+         <ConnectedNoteIDs>58</ConnectedNoteIDs>
+      </Note>
+      <Note Width="28.8818" FontSize="12" ID="61" Position="409.4,2314.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>tez</String>
+         <ConnectedNoteIDs>62</ConnectedNoteIDs>
+      </Note>
+      <Note Width="80.4199" FontSize="12" ID="62" Position="549.2,2302.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>等价于MR</String>
+         <ConnectedNoteIDs>61</ConnectedNoteIDs>
+      </Note>
+      <Note Width="71.106" FontSize="12" ID="63" Position="397.7,2434.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>DBeaver</String>
+         <ConnectedNoteIDs>64-65</ConnectedNoteIDs>
+      </Note>
+      <Note Width="101.172" FontSize="12" ID="64" Position="567.2,2424.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>替代了导航猫</String>
+         <ConnectedNoteIDs>63</ConnectedNoteIDs>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="65" Position="574.2,2474.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>可连接很多</String>
+         <ConnectedNoteIDs>63</ConnectedNoteIDs>
+      </Note>
+   </Notes>
+   <BackgroundShapes/>
+   <NoteStyles>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Engineering Corps" ID="B8B2D438-9774-41D4-A9BC-CD9B67CFEA4B" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.769436 0.762219 0.390143</BorderColor>
+         <FillColor>0.912963 0.894118 0.644541</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Fleet Transport" ID="F1FC305C-052B-4F3F-BB8C-25DADDCC0A26" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.485893 0.568933 0.756207</BorderColor>
+         <FillColor>0.844068 0.869596 0.923064</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Fleet Destroyers" ID="B9EF92EB-4030-4193-B10E-ABBF838D51B9" AffectTextColor="Yes" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <TextColor>1.0 0.0 0.0</TextColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Counter-Intelligence" ID="BC19CAE4-7152-4721-9CF4-A4CCD50E3700" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.690303 0.407263 0.550912</BorderColor>
+         <FillColor>0.898329 0.817472 0.865339</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Mobile Infantry" ID="A708BF64-2D8D-4A31-811E-106607C2DC7B" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.269490 0.164034 0.186694</BorderColor>
+         <FillColor>0.934157 0.888319 0.785290</FillColor>
+      </Style>
+      <Style AffectFontStyle="Yes" AffectAlignment="Yes" Name="Military Intelligence" ID="529063C6-9654-4CB2-A6EB-2BCE352C804C" AffectTextColor="No" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <IsBold>Yes</IsBold>
+         <FontSize>12.0</FontSize>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Advance Scout" ID="9E444576-A25A-4491-B7DD-03B20AB5AD1A" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.399100 0.583322 0.354864</BorderColor>
+         <FillColor>0.808835 0.872419 0.801343</FillColor>
+      </Style>
+   </NoteStyles>
+   <UISettings>
+      <BackgroundColor>1.0 0.988006 0.945006</BackgroundColor>
+      <DefaultFont>Helvetica</DefaultFont>
+      <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+   </UISettings>
+   <PrintSettings VerticalPagination="Auto" HorizontalPagination="Clip" Orientation="Portrait" RightMargin="12.000000" BottomMargin="12.000000" HorizontallyCentered="Yes" ScaleFactor="1.000000" PagesAcross="1" PaperType="iso-a4" PagesDown="1" TopMargin="12.000000" Collates="Yes" PaperSize="-1.000000,-1.000000" LeftMargin="12.000000" VerticallyCentered="Yes"/>
+</ScappleDocument>

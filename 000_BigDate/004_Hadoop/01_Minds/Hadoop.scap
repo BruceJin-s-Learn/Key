@@ -1,139 +1,65 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<ScappleDocument ID="DBBC6E81-B043-4C80-A0B9-CA69FD3AEC45" Version="1.1">
+<ScappleDocument ID="929A1B91-0A18-4F47-8ADE-BE98595896A3" Version="1.1">
    <Notes>
-      <Note Width="125.745" FontSize="12" ID="0" Position="96.1,66.0">
+      <Note Width="61.1084" FontSize="12" ID="0" Position="50.8,430.9">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
-         <String>2、对笔记的理解</String>
-         <ConnectedNoteIDs>1</ConnectedNoteIDs>
+         <String>hadoop</String>
+         <ConnectedNoteIDs>5-7</ConnectedNoteIDs>
       </Note>
-      <Note Width="69.9219" FontSize="12" ID="1" Position="359.4,61.3">
+      <Note Width="85.5469" FontSize="12" ID="1" Position="232.0,85.5">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
-         <String>第二大脑</String>
+         <String>算法复杂度</String>
+      </Note>
+      <Note Width="85.5469" FontSize="12" ID="2" Position="228.9,187.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>大数据思维</String>
+      </Note>
+      <Note Width="38.6719" FontSize="12" ID="3" Position="228.9,272.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>历史</String>
+      </Note>
+      <Note Width="148.047" FontSize="12" ID="4" Position="236.7,366.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>分布式文件系统架构</String>
+      </Note>
+      <Note Width="53.418" FontSize="12" ID="5" Position="264.1,425.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>HDFS</String>
          <ConnectedNoteIDs>0</ConnectedNoteIDs>
       </Note>
-      <Note Width="141.37" FontSize="12" ID="2" Position="96.9,16.8">
+      <Note Width="40.7837" FontSize="12" ID="6" Position="263.3,457.4">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
-         <String>1、记笔记路程坎坷</String>
+         <String>Yarn</String>
+         <ConnectedNoteIDs>0</ConnectedNoteIDs>
       </Note>
-      <Note Width="63.2446" FontSize="12" ID="3" Position="96.1,163.7">
+      <Note Width="88.4521" FontSize="12" ID="7" Position="261.7,502.7">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
          </Appearance>
-         <String>3、起源</String>
-         <ConnectedNoteIDs>4-6</ConnectedNoteIDs>
-      </Note>
-      <Note Width="203.125" FontSize="12" ID="4" Position="245.3,127.0">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>详细笔记费时，结构化一般</String>
-         <ConnectedNoteIDs>3</ConnectedNoteIDs>
-      </Note>
-      <Note Width="292.188" FontSize="12" ID="5" Position="254.7,167.5">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>思维导图，结构清晰，内容可操作性小</String>
-         <ConnectedNoteIDs>3</ConnectedNoteIDs>
-      </Note>
-      <Note Width="233.594" FontSize="12" ID="6" Position="245.4,210.6">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>云端编辑，内存问题，上传限制</String>
-         <ConnectedNoteIDs>3</ConnectedNoteIDs>
-      </Note>
-      <Note Width="38.6719" FontSize="12" ID="7" Position="275.0,354.3">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>笔记</String>
-         <ConnectedNoteIDs>8</ConnectedNoteIDs>
-      </Note>
-      <Note Width="69.9219" FontSize="12" ID="8" Position="434.4,300.4">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>思维导图</String>
-         <ConnectedNoteIDs>7, 10</ConnectedNoteIDs>
-      </Note>
-      <Note Width="116.797" FontSize="12" ID="9" Position="388.3,409.8">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>风暴式笔记软件</String>
-         <ConnectedNoteIDs>13</ConnectedNoteIDs>
-      </Note>
-      <Note Width="38.6719" FontSize="12" ID="10" Position="275.0,257.4">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>我们</String>
-         <ConnectedNoteIDs>8, 11</ConnectedNoteIDs>
-      </Note>
-      <Note Width="63.2446" FontSize="12" ID="11" Position="97.7,251.2">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>4、思路</String>
-         <ConnectedNoteIDs>10</ConnectedNoteIDs>
-      </Note>
-      <Note Width="63.2446" FontSize="12" ID="12" Position="104.3,438.7">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>5、问题</String>
-         <ConnectedNoteIDs>13-14</ConnectedNoteIDs>
-      </Note>
-      <Note Width="46.0938" FontSize="12" ID="13" Position="278.5,410.5">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>步骤</String>
-         <ConnectedNoteIDs>9, 12</ConnectedNoteIDs>
-      </Note>
-      <Note Width="46.0938" FontSize="12" ID="14" Position="277.4,487.9">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>存储</String>
-         <ConnectedNoteIDs>12, 15</ConnectedNoteIDs>
-      </Note>
-      <Note Width="90.6128" FontSize="12" ID="15" Position="389.9,487.9">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>github/gitee</String>
-         <ConnectedNoteIDs>14</ConnectedNoteIDs>
-      </Note>
-      <Note Width="132.422" FontSize="12" ID="16" Position="93.7,547.3">
-         <Appearance>
-            <Alignment>Left</Alignment>
-            <Border Weight="0" Style="Rounded"/>
-         </Appearance>
-         <String>适合自己是最好的</String>
+         <String>Mapreduce</String>
+         <ConnectedNoteIDs>0</ConnectedNoteIDs>
       </Note>
    </Notes>
    <BackgroundShapes/>

@@ -1705,3 +1705,5 @@ ntpdate cn.ntp.org.cn >> /home/logs.txt
 
 + ssh 用户@ip “cmd”
 + <img src="00_Linux.assets/image-20210116105848509.png" alt="image-20210116105848509" style="zoom:67%;" />
+
+6.15 

@@ -914,11 +914,11 @@ grep -r "shen" /home | cut -d ":" -f 1
 
 ### 11.1.1 ./xxx.sh
 
-
++ 直接运行
 
 ### 11.1.2 sh xxx.sh
 
-
++ 直接运行，同`bash xxx.sh`
 
 ### 11.1.3 source xxx.sh
 
