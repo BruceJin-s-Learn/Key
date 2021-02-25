@@ -6,15 +6,15 @@
 
 ### 1.1 工作机制
 
-+ <img src="Zookeeper.assets/image-20210106111216892.png" alt="image-20210106111216892" style="zoom: 33%;" />
++ <img src="00_Zookeeper.assets/image-20210106111216892.png" alt="image-20210106111216892" style="zoom: 33%;" />
 
 ### 1.2 特点
 
-+ <img src="Zookeeper.assets/image-20210106113853446.png" alt="image-20210106113853446" style="zoom:50%;" />
++ <img src="00_Zookeeper.assets/image-20210106113853446.png" alt="image-20210106113853446" style="zoom:50%;" />
 
 ### 1.3 数据结构
 
-+ <img src="Zookeeper.assets/image-20210106114223891.png" alt="image-20210106114223891" style="zoom:50%;" />
++ <img src="00_Zookeeper.assets/image-20210106114223891.png" alt="image-20210106114223891" style="zoom:50%;" />
 
 ### 1.4 应用场景
 
@@ -29,23 +29,23 @@
 
 #### 1.4.2 统一命名服务
 
-+ <img src="Zookeeper.assets/image-20210106114424051.png" alt="image-20210106114424051" style="zoom:50%;" />
++ <img src="00_Zookeeper.assets/image-20210106114424051.png" alt="image-20210106114424051" style="zoom:50%;" />
 
 #### 1.4.3 统一配置管理
 
-+ <img src="Zookeeper.assets/image-20210106114601939.png" alt="image-20210106114601939" style="zoom:50%;" />
++ <img src="00_Zookeeper.assets/image-20210106114601939.png" alt="image-20210106114601939" style="zoom:50%;" />
 
 #### 1.4.4 统一集群管理
 
-+ <img src="Zookeeper.assets/image-20210106114634905.png" alt="image-20210106114634905" style="zoom: 50%;" />
++ <img src="00_Zookeeper.assets/image-20210106114634905.png" alt="image-20210106114634905" style="zoom: 50%;" />
 
 #### 1.4.5 服务器动态上下线
 
-+ <img src="Zookeeper.assets/image-20210106114824574.png" alt="image-20210106114824574" style="zoom:50%;" />
++ <img src="00_Zookeeper.assets/image-20210106114824574.png" alt="image-20210106114824574" style="zoom:50%;" />
 
 #### 1.4.6 软负载均衡
 
-+ <img src="Zookeeper.assets/image-20210106114922098.png" alt="image-20210106114922098" style="zoom:50%;" />
++ <img src="00_Zookeeper.assets/image-20210106114922098.png" alt="image-20210106114922098" style="zoom:50%;" />
 
 
 

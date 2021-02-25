@@ -11,7 +11,7 @@
 
 + 命令行解释器
 + 接收应用程序/用户命令，然后盗用操作系统内核。
-  + <img src="Shell.assets/image-20210105191916841.png" alt="image-20210105191916841" style="zoom: 50%;" />
+  + <img src="03_Shell.assets/image-20210105191916841.png" alt="image-20210105191916841" style="zoom: 50%;" />
 + 功能强大的变成语言，易编写、易调试、灵活性强 。
 
 + `$`表示命令提示符
@@ -703,7 +703,7 @@ d #删除
 
 + 执行后文件内容不改变。
 
-+ <img src="Shell.assets/image-20210106091433872.png" alt="image-20210106091433872" style="zoom:67%;" />
++ <img src="03_Shell.assets/image-20210106091433872.png" alt="image-20210106091433872" style="zoom:67%;" />
 
 + 脚本之家网站可搜sed获取ip的命令行
 
@@ -922,13 +922,13 @@ grep -r "shen" /home | cut -d ":" -f 1
 
 ### 11.1.3 source xxx.sh
 
-+ <img src="Shell.assets/image-20210115090551811-1610672823065.png" alt="image-20210115090551811" style="zoom:80%;" />
++ <img src="03_Shell.assets/image-20210115090551811-1610672823065.png" alt="image-20210115090551811" style="zoom:80%;" />
 
 前两个是其他执行方式
 
 第二个是source执行方式
 
-+ <img src="Shell.assets/image-20210115090727663.png" alt="image-20210115090727663" style="zoom:50%;" />
++ <img src="03_Shell.assets/image-20210115090727663.png" alt="image-20210115090727663" style="zoom:50%;" />
 + 可以看到其他执行方式是新开辟一个子进程去执行脚本文件
   + 而source是在本进程下直接执行脚本文件
 + 局部变量source可以识别和获取，因为它直接获取

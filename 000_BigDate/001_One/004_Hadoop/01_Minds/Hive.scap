@@ -490,7 +490,7 @@
          <String>列式存储</String>
          <ConnectedNoteIDs>58</ConnectedNoteIDs>
       </Note>
-      <Note Width="28.8818" FontSize="12" ID="61" Position="409.4,2314.5">
+      <Note Width="46.0938" FontSize="12" ID="61" Position="461.7,2375.4">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
@@ -498,7 +498,7 @@
          <String>tez</String>
          <ConnectedNoteIDs>62</ConnectedNoteIDs>
       </Note>
-      <Note Width="80.4199" FontSize="12" ID="62" Position="549.2,2302.0">
+      <Note Width="97.6319" FontSize="12" ID="62" Position="601.5,2362.9">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
@@ -506,7 +506,7 @@
          <String>等价于MR</String>
          <ConnectedNoteIDs>61</ConnectedNoteIDs>
       </Note>
-      <Note Width="71.106" FontSize="12" ID="63" Position="397.7,2434.8">
+      <Note Width="71.106" FontSize="12" ID="63" Position="453.2,2255.1">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
@@ -514,7 +514,7 @@
          <String>DBeaver</String>
          <ConnectedNoteIDs>64-65</ConnectedNoteIDs>
       </Note>
-      <Note Width="101.172" FontSize="12" ID="64" Position="567.2,2424.6">
+      <Note Width="101.172" FontSize="12" ID="64" Position="622.7,2244.9">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
@@ -522,7 +522,7 @@
          <String>替代了导航猫</String>
          <ConnectedNoteIDs>63</ConnectedNoteIDs>
       </Note>
-      <Note Width="85.5469" FontSize="12" ID="65" Position="574.2,2474.6">
+      <Note Width="85.5469" FontSize="12" ID="65" Position="629.7,2294.9">
          <Appearance>
             <Alignment>Left</Alignment>
             <Border Weight="0" Style="Rounded"/>
