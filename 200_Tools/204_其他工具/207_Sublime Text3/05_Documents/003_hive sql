@@ -1,0 +1,28 @@
+hive sql
+
+表
+	创建
+		create [external] table [if not exists] tablename(
+			`colname` datatype [comment...],
+			...
+		)
+		partitioned by ...
+		clustered by
+
+DML
+	加载
+		load data [local] inpath '路径' [overwrite] into table Biaoming  【partition=】
+
+	查询
+		同sql
+			case when较多
+			空值处理 nvl()
+			日期处理函数
+
+UDF&UDTF
+	继承什么类，实现什么方法
+	继承UDF类，实现exaluate方法
+	根据业务
+
+	agg聚合，sum()后肯定有group by
+

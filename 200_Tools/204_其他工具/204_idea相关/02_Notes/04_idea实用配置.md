@@ -7,3 +7,9 @@
 上图：
 
 + <img src="04_idea%E5%AE%9E%E7%94%A8%E9%85%8D%E7%BD%AE.assets/image-20210107113008425.png" alt="image-20210107113008425" style="zoom:50%;" />
+
+## 2.取消打开上次项目
+
+<img src="04_idea%E5%AE%9E%E7%94%A8%E9%85%8D%E7%BD%AE.assets/image-20210228133212839.png" alt="image-20210228133212839" style="zoom:50%;" />
+
+3.

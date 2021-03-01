@@ -1,4 +1,7 @@
-快捷键
-ctrl+shift+P
-显示菜单栏：
-view:toggle menu
+sublime快捷键
+
+01|进入命令输入：
+	ctrl+shift+P
+02|显示菜单栏：
+	view:toggle menu
+
