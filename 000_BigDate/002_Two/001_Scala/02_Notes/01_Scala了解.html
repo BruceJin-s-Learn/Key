@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>01_Scala了解</title></head>
+<body><h1>Scala了解</h1>
+<h3>A1 为什么学</h3>
+<ol start='' >
+<li>基于JVM与Java语言相似</li>
+<li>spark 底层是Scala写的</li>
+
+</ol>
+<h3>A2 版本</h3>
+<figure><table>
+<thead>
+<tr><th>spark</th><th>scala</th></tr></thead>
+<tbody><tr><td>1.6</td><td>2.10</td></tr><tr><td>2.0</td><td>2.11</td></tr></tbody>
+</table></figure>
+<p>版本对应可以在maven依赖网站（<a href='https://mvnrepository.com/artifact/org.apache.spark/spark-core' target='_blank' class='url'>https://mvnrepository.com/artifact/org.apache.spark/spark-core</a>）查看</p>
+<ul>
+<li><img src="01_Scala%E4%BA%86%E8%A7%A3.assets/image-20210228150320581.png" alt="image-20210228150320581" style="zoom:33%;" /></li>
+
+</ul>
+<h3>A3 特性</h3>
+<p><strong>总：</strong></p>
+<ul>
+<li>面向对象</li>
+<li>面向函数</li>
+
+</ul>
+<p><strong>分：</strong></p>
+<ol start='' >
+<li><p>Scala和Java可以混编，无缝连接</p>
+<ol start='' >
+<li>两种语言编写的类直接相互调用等</li>
+
+</ol>
+</li>
+<li><p>类型推测（自动推测类型）</p>
+<ol start='' >
+<li>Scala是强类型语言</li>
+
+</ol>
+</li>
+<li><p>并发和分布式（Actor）</p>
+</li>
+<li><p>特质、特征（类似java中interface和abstract的结合）</p>
+</li>
+<li><p>模式匹配（类似java switch）</p>
+</li>
+<li><p>高阶函数</p>
+</li>
+
+</ol>
+<h3>A4 应用</h3>
+<ul>
+<li><code>kafka</code>：分布式消息队列，内部代码经常用来处理<strong>并发</strong>的问题，用scala可以大大简化其代码。</li>
+
+</ul>
+<ul>
+<li><code>spark</code>：方便处理<strong>多线程</strong>场景，另外<code>spark</code>主要用作内存计算，经常要用来实现复杂的算法。利用<code>scala</code>这种<strong>函数式编程语言</strong>可以大大简化代码。</li>
+
+</ul>
+</body>
+</html>

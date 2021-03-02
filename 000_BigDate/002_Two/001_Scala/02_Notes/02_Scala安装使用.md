@@ -38,3 +38,10 @@ https://plugins.jetbrains.com/
 
 + <img src="02_Scala%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20210301162219675.png" alt="image-20210301162219675" style="zoom:33%;" />
 
+### 1.4 使用scala命令行
+
+使用`msi`方式安装，程序会自动配置好环境变量。
+
+scala
+
++ <img src="02_Scala%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8.assets/image-20210301213201376.png" alt="image-20210301213201376" style="zoom:50%;" />
