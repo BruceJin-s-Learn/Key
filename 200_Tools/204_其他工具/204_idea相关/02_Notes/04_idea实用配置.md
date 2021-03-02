@@ -12,4 +12,26 @@
 
 <img src="04_idea%E5%AE%9E%E7%94%A8%E9%85%8D%E7%BD%AE.assets/image-20210228133212839.png" alt="image-20210228133212839" style="zoom:50%;" />
 
-3.
+## 3.鼠标悬停提示
+
+效果：
+
++ <img src="04_idea%E5%AE%9E%E7%94%A8%E9%85%8D%E7%BD%AE.assets/image-20210302170225011.png" alt="image-20210302170225011" style="zoom:50%;" />
+
+设置：
+
++ <img src="04_idea%E5%AE%9E%E7%94%A8%E9%85%8D%E7%BD%AE.assets/image-20210302170307544.png" alt="image-20210302170307544" style="zoom:50%;" />
+
+
+
+## 4.显示方法分割线
+
+效果：
+
++ <img src="04_idea%E5%AE%9E%E7%94%A8%E9%85%8D%E7%BD%AE.assets/image-20210302170448636.png" alt="image-20210302170448636" style="zoom:33%;" />
+
+设置：
+
++ <img src="04_idea%E5%AE%9E%E7%94%A8%E9%85%8D%E7%BD%AE.assets/image-20210302170425444.png" alt="image-20210302170425444" style="zoom:50%;" />
+
+5.
