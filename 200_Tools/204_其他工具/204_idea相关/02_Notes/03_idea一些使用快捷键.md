@@ -12,4 +12,8 @@
 
 `ctrl+alt+l`
 
-4、
+## 4、快速换行
+
+`shift + enter`
+
+5、

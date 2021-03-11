@@ -223,7 +223,7 @@ Apache Flink 是一个**框架**和**分布式**处理引擎，用于在**无边
 
   + 事件驱动（Event-driven）
 
-    <img src="Flink.assets/image-20201228093751893.png" alt="image-20201228093751893" style="zoom: 67%;" />
+    <img src="Flink.assets/image-20201228093751893-1615187355738.png" alt="image-20201228093751893" style="zoom: 67%;" />
 
   + 基于流的世界观
 
