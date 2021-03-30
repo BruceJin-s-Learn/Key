@@ -1,0 +1,124 @@
+spark 命令
+
+./spark-submit
+--master yarn 
+--class org.apache.spark.examples.SparkPi 
+../examples/jars/spark-examples_2.12-2.4.6.jar 10
+
+./spark-submit
+--master yarn 
+--deploy-mode cluster 
+--class org.apache.spark.examples.SparkPi 
+../examples/jars/spark-examples_2.12-2.4.6.jar 10
+
+./spark-submit
+--master
+--deploy-mode
+--class
+--jars
+--files
+--conf
+--driver-memory
+--executor-memory
+
+
+
+bin/spark-submit \
+--master spark://node01:7077 \
+--class org.apache.spark.examples.SparkPi \
+--conf spark.eventLog.enabled=true \
+--conf spark.eventLog.dir=hdfs://bdp/spark-logs \
+./examples/jars/spark-examples_2.12-2.4.6.jar 100
+
+----------------------------------yarn----------------------------------
+./spark-submit \
+--master yarn \
+--depoly-mode cluster \
+--class 主类 \
+--driver-memory 6g \
+--executor-memory 6g \
+--num-executor 20 \
+--executor-cores 3 \
+/jar包路径 任务参数
+-----------------------------上述命令是spark提交到yarn集群，参数有所不同-----------------------
+----standalone-----------------------------------------------------------------------
+./spark-submit \
+--master spark://node01:7077 \
+--class 主类 \
+--driver-memory 6g \
+--executor-memory 6g \
+--total-executor-cores 120 \
+--executor-cores 3 \
+/jar包路径 任务参数
+
+-----------------------------1.资源优化-----------------------------
+cores提高，num个数调多，都能提高任务并行度。
+memory提高：
+
+	1.存：从内存管理的角度来看，executor内存调大，可以缓存更多的数据，提高效率。
+	2.shuffle：shuffle聚合操作，也可以有更多内存参与与数据拉取，较少io次数。
+		+ 参数：map(32K)，reduce(48M),官网
+	3.计算：task执行内存更多，在操作过程中创建的对象很多可能导致频繁GC。（GC影响整体计算性能【阻塞】）
+
+总结：资源，多多益善！
+
+-----------------------------2.并行度调优---------------------------
+- HDFS 将 file线性切割 block
+- mapReduce 行读取 block -> split -map-> reduce -> result（关于split大小确定查看源码）
+- coalesce在过滤后减小。
+- 核心思想：合理（核数的2~3倍）
+	+ 数据大，并行度高
+	+ 数据小，并行度少
+
+1.core
+2.spark
+3.sql
+partition=task=并行度
+-----------------------------3.代码调优-----------------------------
+- RDD避免重复
+- 持久化
+- 尽量少shuffle类算子
+- 预聚合
+- 使用高性能算子
+- 使用广播变量
+- 使用Kryo优化序列化性能（注册）
+- 数据结构
+- 高性能库（第三方类库）
+-----------------------------4.数据本地化---------------------------
+- 计算本地化级别
+	+ process_local：同executor --------进程本地化
+	+ node_local：同节点不同executor-----节点本地化
+	+ rack_local：同机架不同节点---------机架本地化
+	+ no_pref：数据放在关系型数据库中-----外存
+	+ ANY：跨机架
+- spark数据本地化调优：
+	+ 调整wait时间，从高到低
+-----------------------------5.内存调优---------------------------
+- JVM调优，内存管理
+- 怎么判断内存不足：
+	+ 频繁GC（会造成阻塞）
+	+ shufflefileNotFound：毁灭级报错，直接停止任务
+		-提高等待时间
+-----------------------------6.spark shuffle调优----------------
+- buffle大小，默认32KB
+- shuffle read拉取数量大小，默认48M
+- shuffle聚合内存比例，默认20%
+- 拉取数据重试次数，默认5次
+- 重试间隔时间，默认60s
+- spark shuffle的种类，hashsort，bypass等
+- sortShuffle bypass机制，默认200次，调大
+----------------------------7.解决数据倾斜---------------------------
+- 先定位数据源
+- 解决办法
+	+ hive/ETL预处理数据（spark甩锅）
+	+ 过滤
+	+ 提高shuffle，提高并行度
+	+ 双重聚合
+	+ reduce join -> map join(join一般有shuffle)
+	+ 采用倾斜key并分析join操作：不一定有效
+	+ 使用随机前缀和扩容RDD进行join
+
+---------------------------8.spark故障解决（troubleshooting）--------------------------
+- shuffle file cannot find：磁盘小文件找不到
+- 序列化问题 ser...
+- Null值问题

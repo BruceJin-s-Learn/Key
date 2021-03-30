@@ -11,8 +11,9 @@ logistic regression 迭代场景
 spark速度快的原因：
 
 1. 基于内存，spark中间结果不落盘/hadoop频繁落盘
-
 2. DAG
+
+不适合迭代
 
 ## 3.shuffle
 
@@ -46,8 +47,6 @@ spark中
 泊松
 
 伯努利
-
-
 
 ## 7.combiner
 
@@ -393,8 +392,6 @@ stage的切割规则：从后往前，遇到宽依赖就切割stage。
 
 从后往前，遇到宽依赖就切割stage。
 
-
-
 ## 21.编码习惯
 
 自己在测试时，最好在foreach前加个collect
@@ -403,7 +400,11 @@ rdd.collect().foreach(println)
 
 ## 22.stage的管道
 
+stage的计算原理
 
+![image-20210314152745498](Spark%E9%98%B6%E6%AE%B5%E9%97%AE%E9%A2%98.assets/image-20210314152745498.png)
+
+关键：数据落地
 
 ## 23.groupByKey 源码@note
 
@@ -411,4 +412,153 @@ rdd.collect().foreach(println)
 
 
 
-24.
+## 24.KryoSerializer
+
+spark的序列化，相较于Java的序列化更迅速轻便。
+
+**序列化的作用主要是利用时间换空间**
+
+- *分发给Executor上的Task*
+- *需要缓存的RDD（前提是使用序列化方式缓存）*
+- *广播变量*
+- *Shuffle过程中的数据缓存*
+- *使用receiver方式接收的流数据缓存*
+- *算子函数中使用的外部变量*
+
+上面的六种数据，通过Java序列化（默认的序列化方式）形成一个二进制字节数组，大大减少了数据在内存、硬盘中占用的空间，减少了网络数据传输的开销，并且可以精确的推测内存使用情况，降低GC频率。
+
+## 25.supervise
+
+失败后是否重启Driver，仅限于Spark alone或者Mesos模式
+
+## 26.跟cores相关的参数
+
+
+
+## 27.AM和EL
+
+
+
+## 28.yarn有几种调度器？
+
+3种
+
+https://blog.csdn.net/Jin_Lemon/article/details/114765523
+
+## 29.磁盘调度算法
+
+先进先出
+
+最近寻址
+
+电梯
+
+## 30.没有资源了
+
+报错：
+
+<img src="Spark%E9%98%B6%E6%AE%B5%E9%97%AE%E9%A2%98.assets/image-20210312103041480.png" alt="image-20210312103041480" style="zoom:67%;" />
+
+
+
+
+
+## 31.写hadoop地址
+
+要区分active和备，所以最好写集群名，不写下面的具体
+
+sc.textFile("hdfs://node1:9000/spark/test/wc.txt").flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_).foreach(println)
+
+写
+
+sc.textFile("hdfs://bdp/spark/test/wc.txt").flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_).foreach(println)
+
+位置：
+
+![image-20210312103732646](Spark%E9%98%B6%E6%AE%B5%E9%97%AE%E9%A2%98.assets/image-20210312103732646.png)
+
+
+
+
+
+## 32.spark相关配置
+
+优先级从上到下
+
+1. 代码（写死）
+2. 命令行（最好，灵活）
+3. 文件（默认）
+
+## 33.日志压缩
+
+lz4格式
+
+## 34.spark怎么实现自定义累加器？
+
+Spark自定义累加器需要实现 **AccumulatorParam**
+
+<img src="Spark%E9%98%B6%E6%AE%B5%E9%97%AE%E9%A2%98.assets/image-20210314212326607.png" alt="image-20210314212326607" style="zoom:50%;" />
+
+## 35.溢写
+
+https://blog.csdn.net/godlovedaniel/article/details/113979588
+
+## 36.spark中RPC
+
+1.6 前 akka
+
+1.6 后 akka+netty
+
+## 37.master源码
+
+1.角色
+
+​	Rpc声明周期
+
+2.过程（生命周期）
+
+**构造**
+
+**onstart**
+
+**reserive**
+
+​	选举leader
+
+​	完成恢复
+
+​	删除leader
+
+​	前四个需要自己理解，执行过程中，无非就是 根据mastar、worker、driver、executor、app等不同的状态有不同的应对手段。
+
+**onstop**
+
+3.关键：
+
+schedule()方法
+
+## 38.worker源码
+
+worker的注册核心在于资源的汇报
+
+## 39.stage源码
+
+![image-20210315110349427](Spark%E9%98%B6%E6%AE%B5%E9%97%AE%E9%A2%98.assets/image-20210315110349427.png)
+
+## 39.遇到错误
+
+看日志（xxx.out）
+
+
+
+## 40.关于local[*]
+
+![image-20210325100457507](Spark%E9%98%B6%E6%AE%B5%E9%97%AE%E9%A2%98.assets/image-20210325100457507.png)
+
+https://www.jianshu.com/p/38ced3936a90?utm_campaign=maleskine
+
+Intel的cpu可以做到线程数是核数的倍数，但是AMD没有这项技术。
+
+所以如果电脑是intel的，那么线程数就可能是核数*2个，但也可能是乘3等。
+
+这个也不一定完全是cpu核数，可能是当下可用的最大核数。
