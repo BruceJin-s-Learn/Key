@@ -1,19 +1,36 @@
 # idea一些使用快捷键
 
-## 1、括号中参数提示
+## A1 括号中参数提示
 
 `ctrl+p`
 
-## 2、查看方法或源码
+## A2 查看方法或源码
 
 `ctrl+shift+n`
 
-## 3、格式化代码
+`ctrl+alt+F12`
+
+`ctrl+alt+左右方向`
+
+## A3 格式化代码
 
 `ctrl+alt+l`
 
-## 4、快速换行
+## A4 快速换行
 
 `shift + enter`
 
-5、
+## A5 收起和放开方法等
+
+`shift + + `
+
+`shift + -`
+
+## A6 新建
+
+`ctrl+alt+ins`
+
+## A7 重写
+
+`ctrl+alt+o`
+
