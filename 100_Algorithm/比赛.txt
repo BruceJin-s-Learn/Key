@@ -1,0 +1,10 @@
+1、最推荐的两个主流平台
+Kaggle：https://www.kaggle.com
+天池：https://tianchi.aliyun.com/home
+
+2、国内其他主要平台
+DataCastle：http://www.pkbigdata.com
+Datafountain：https://www.datafountain.cn
+Biendata：https://www.biendata.com
+Kesci：https://www.kesci.com
+FlyAI：https://www.flyai.com
